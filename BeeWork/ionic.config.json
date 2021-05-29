@@ -1,0 +1,7 @@
+{
+  "name": "BeeWork",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
