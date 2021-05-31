@@ -2,7 +2,7 @@
 <widget id="io.ionic.starter" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>BeeWork</name>
     <description>Progetto per l'esame di Applicazioni per Dispositivi Mobili in Ionic/Cordova.</description>
-    <author email="selene.verna@student.univaq.it" href="http://ionicframework.com/">Ionic Framework Team</author>
+    <author email="selene.verna@univaq.student.it" href="http://ionicframework.com/">Ionic Framework Team</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
