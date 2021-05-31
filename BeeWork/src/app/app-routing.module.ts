@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'impostazioni',
     loadChildren: () => import('./pages/impostazioni/impostazioni.module').then(m => m.ImpostazioniPageModule)
   },
+  {
+    path: 'progetto',
+    loadChildren: () => import('./pages/progetto/progetto.module').then( m => m.ProgettoPageModule)
+  }
 ];
 
 @NgModule({

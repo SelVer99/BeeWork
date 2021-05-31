@@ -11,18 +11,23 @@ export class AppComponent {
   public appPages = [
     {
       title: 'Home',
-      url: '/pages/home',
+      url: '/home',
       icon: 'home'
     },
     {
-      title: '',
-      url: '/pages/aggiungi-progetto',
-      icon: 'aggiungi-progetto'
+      title: 'Aggiungi Progetto',
+      url: '/aggiungi-progetto',
+      icon: 'add-outline'
+    },
+    {
+      title: 'Progetto',
+      url: '/progetto',
+      icon: 'hammer-outline'
     },
     {
       title: 'Impostazioni',
-      url: '/pages/impostazioni',
-      icon: 'impostazioni'
+      url: '/impostazioni',
+      icon: 'settings-outline'
     }
   ];
 }
