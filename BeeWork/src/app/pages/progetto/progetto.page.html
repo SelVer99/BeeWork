@@ -1,9 +1,43 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>progetto</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>nome progetto</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      descrizione progetto
+    </ion-card-content>
+    <ion-chip color="danger">
+      <ion-label color="danger">etichetta (es urgente)</ion-label>
+    </ion-chip>
+
+    <ion-chip color="tertiary">
+      <ion-icon name="calendar-outline" color="tertiary"></ion-icon>
+      <ion-label color="tertiary">10-06-2021</ion-label>
+    </ion-chip>
+
+  </ion-card>
+
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Completamento: xx%</ion-label>
+    </ion-list-header>
+    <ion-progress-bar color="success" value="0.5"></ion-progress-bar>
+  </ion-list>
+
+  <button class="button button1">SV</button>
+  <button class="button button4">FC</button>
+
+  <button class="button button2">
+    <ion-icon name="add-outline"></ion-icon>
+  </button>
+
+  <ion-button  class="button button3" [routerLink]="['/lista-task']" expand="block" color="tertiary" strong="true">
+  Lista task</ion-button>
 
 </ion-content>

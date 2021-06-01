@@ -22,7 +22,12 @@ const routes: Routes = [
   {
     path: 'progetto',
     loadChildren: () => import('./pages/progetto/progetto.module').then( m => m.ProgettoPageModule)
+  },
+  {
+    path: 'lista-task',
+    loadChildren: () => import('./pages/lista-task/lista-task.module').then(m => m.ListaTaskPageModule)
   }
+
 ];
 
 @NgModule({
