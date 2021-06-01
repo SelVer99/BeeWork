@@ -4,6 +4,30 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true">
+
+  <form [formGroup]="newProjectForm" (ngSubmit)="submit()">
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Nome</ion-label>
+        <ion-textarea autocapitalize inputmode="text" formControlName="name"></ion-textarea>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Descrizione</ion-label>
+        <ion-textarea inputmode="text" formControlName="description"></ion-textarea>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Scadenza</ion-label>
+        <ion-datetime displayFormat="DD MM YY" placeholder="Seleziona una data" formControlName="expirationDate"></ion-datetime>
+      </ion-item>
+
+      
+    <ion-button id= "button" [disabled]="!newProjectForm.valid" color="primary" expand="block" type="submit">Crea
+    </ion-button>
+
+    </ion-list>
+  </form>
 
 </ion-content>

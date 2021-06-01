@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-aggiungi-progetto',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AggiungiProgettoPage implements OnInit {
 
-  constructor() { }
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit() {
   }
 
+  newProjectForm = this.formBuilder.group({
+    name: ['', Validators.required],
+    description: [''],
+    expirationDate: ['', Validators.required]
+  });
+  
+  public submit() {
+    console.log(this.newProjectForm.value);
+  }
 }
