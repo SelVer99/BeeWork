@@ -26,7 +26,12 @@ const routes: Routes = [
   {
     path: 'lista-task',
     loadChildren: () => import('./pages/lista-task/lista-task.module').then(m => m.ListaTaskPageModule)
+  },
+  {
+    path: 'profilo-membro',
+    loadChildren: () => import('./pages/profilo-membro/profilo-membro.module').then(m => m.ProfiloMembroPageModule)
   }
+
 
 ];
 
