@@ -15,19 +15,29 @@ export class AppComponent {
       icon: 'home'
     },
     {
-      title: 'Aggiungi Progetto',
-      url: '/aggiungi-progetto',
-      icon: 'add-outline'
+      title: 'Profilo Personale',
+      url: '/profilo-personale',
+      icon: 'person-circle-outline'
     },
     {
-      title: 'Progetto',
-      url: '/progetto',
+      title: 'Progetti/Task Personali',
+      url: '/progetti-task-personali',
       icon: 'hammer-outline'
+    },
+    {
+      title: 'Calendario',
+      url: '/calendario',
+      icon: 'calendar-number-outline'
     },
     {
       title: 'Impostazioni',
       url: '/impostazioni',
       icon: 'settings-outline'
+    },
+    {
+      title: 'Log Out',
+      url: '/login',
+      icon: 'log-out-outline'
     }
   ];
 }

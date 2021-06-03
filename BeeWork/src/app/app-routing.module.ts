@@ -3,12 +3,16 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
     path: 'home',
     loadChildren: () => import('./pages/home/home.module').then(m => m.HomePageModule)
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
@@ -30,8 +34,19 @@ const routes: Routes = [
   {
     path: 'profilo-membro',
     loadChildren: () => import('./pages/profilo-membro/profilo-membro.module').then(m => m.ProfiloMembroPageModule)
+  },
+  {
+    path: 'progetti-task-personali',
+    loadChildren: () => import('./pages/progetti-task-personali/progetti-task-personali.module').then( m => m.ProgettiTaskPersonaliPageModule)
+  },
+  {
+    path: 'profilo-personale',
+    loadChildren: () => import('./pages/profilo-personale/profilo-personale.module').then( m => m.ProfiloPersonalePageModule)
+  },
+  {
+    path: 'calendario',
+    loadChildren: () => import('./pages/calendario/calendario.module').then( m => m.CalendarioPageModule)
   }
-
 
 ];
 
