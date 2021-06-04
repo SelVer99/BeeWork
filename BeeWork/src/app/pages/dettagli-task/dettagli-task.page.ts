@@ -15,6 +15,7 @@ export class DettagliTaskPage implements OnInit {
   ngOnInit() {
   }
 
+
   submit(){
     this.myVal1 = this.myVal;
     this.myVal='';
