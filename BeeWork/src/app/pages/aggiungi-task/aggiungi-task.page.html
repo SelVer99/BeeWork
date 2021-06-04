@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Nuovo task</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+
+  <form [formGroup]="newTaskForm">
+    <ion-list>
+      <ion-item>
+          <ion-label position="stacked" >Etichetta</ion-label>
+          <ion-input inputmode="text" formControlName="label"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Nome</ion-label>
+        <ion-textarea autocapitalize inputmode="text" formControlName="name" ></ion-textarea>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Descrizione</ion-label>
+        <ion-textarea inputmode="text" formControlName="description"></ion-textarea>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Scadenza</ion-label>
+        <ion-datetime displayFormat="DD MM YY" placeholder="Seleziona una data" formControlName="expirationDate"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Prorità</ion-label>
+        <ion-select placeholder="Select One" formControlName="priority">
+          <ion-select-option value="high">Alta</ion-select-option>
+          <ion-select-option value="medium">Media</ion-select-option>
+          <ion-select-option value="low">Bassa</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Membri</ion-label>
+        <ion-select multiple="true" formControlName="members">
+          <ion-select-option *ngFor="let member of members" [value]="member">{{ member }}</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+    <ion-button id= "button" [routerLink]="['/lista-task']" [disabled]="!newTaskForm.valid" color="primary" expand="block" type="submit">Crea task
+    </ion-button>
+
+    </ion-list>
+  </form>
+
+</ion-content>

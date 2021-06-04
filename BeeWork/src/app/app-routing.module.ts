@@ -37,6 +37,7 @@ const routes: Routes = [
   },
   {
     path: 'progetti-task-personali',
+    // eslint-disable-next-line max-len
     loadChildren: () => import('./pages/progetti-task-personali/progetti-task-personali.module').then( m => m.ProgettiTaskPersonaliPageModule)
   },
   {
@@ -46,7 +47,12 @@ const routes: Routes = [
   {
     path: 'calendario',
     loadChildren: () => import('./pages/calendario/calendario.module').then( m => m.CalendarioPageModule)
+  },
+  {
+    path: 'aggiungi-task',
+    loadChildren: () => import('./pages/aggiungi-task/aggiungi-task.module').then( m => m.AggiungiTaskPageModule)
   }
+
 
 ];
 

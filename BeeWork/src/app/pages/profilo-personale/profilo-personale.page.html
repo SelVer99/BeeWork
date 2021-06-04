@@ -4,7 +4,10 @@
   </ion-toolbar>
 </ion-header>
 
+
+
 <ion-content>
+
   <ion-card>
     <div class="card">
       <ion-card-header>
@@ -18,19 +21,25 @@
     </div>
   </ion-card>
 
-  <ion-card>
+  <ion-card id="bio">
     <ion-card-header>
       <ion-card-title>Bio</ion-card-title>
+      <ion-button color="primary" (click)="toggleVisibility()">
+        <ion-icon name="pencil-outline"></ion-icon>
+      </ion-button>
     </ion-card-header>
     <ion-card-content>
-      Paul Yeboah (born 4 August 1992), known as Bello FiGo, is a Ghanaian YouTuber and singer known in Italy for his
-      numerous songs in which he often parodies different topics like racism, sexism and politics that often caused
-      controversy and debate in Italy about his social, political and cultural role because of the way he talks about these topics.
+      <p *ngIf="!isVisible">
+        {{ bio }}
+      </p>
+      <ion-textarea *ngIf="isVisible" rows="10" inputmode="text" [(ngModel)]="bio">
+      </ion-textarea>
+
     </ion-card-content>
   </ion-card>
-  <div id="button">
-    <ion-button color="primary">
-      Aggiorna la Bio
+
+    <ion-button *ngIf="isVisible" id="button" color="primary" (click)="toggleVisibility()">
+      Aggiorna Bio
     </ion-button>
-  </div>
+
 </ion-content>

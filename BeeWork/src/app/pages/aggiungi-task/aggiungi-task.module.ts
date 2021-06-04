@@ -1,20 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { IonicModule } from '@ionic/angular';
 
-import { ProfiloPersonalePageRoutingModule } from './profilo-personale-routing.module';
+import { AggiungiTaskPageRoutingModule } from './aggiungi-task-routing.module';
 
-import { ProfiloPersonalePage } from './profilo-personale.page';
+import { AggiungiTaskPage } from './aggiungi-task.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    IonicModule,
     ReactiveFormsModule,
-    ProfiloPersonalePageRoutingModule
+    IonicModule,
+    AggiungiTaskPageRoutingModule
   ],
-  declarations: [ProfiloPersonalePage]
+  declarations: [AggiungiTaskPage]
 })
-export class ProfiloPersonalePageModule {}
+export class AggiungiTaskPageModule {}
