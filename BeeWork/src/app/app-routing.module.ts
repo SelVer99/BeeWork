@@ -51,7 +51,12 @@ const routes: Routes = [
   {
     path: 'aggiungi-task',
     loadChildren: () => import('./pages/aggiungi-task/aggiungi-task.module').then( m => m.AggiungiTaskPageModule)
+  },
+  {
+    path: 'dettagli-task',
+    loadChildren: () => import('./pages/dettagli-task/dettagli-task.module').then(m => m.DettagliTaskPageModule)
   }
+
 
 
 ];
