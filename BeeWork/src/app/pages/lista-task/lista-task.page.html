@@ -5,5 +5,29 @@
 </ion-header>
 
 <ion-content>
+    <ion-list>`
+      <ion-item button color="primary">
+        <ion-label>
+          <h3>Task 1</h3>
+        </ion-label>
+      </ion-item>
+      <ion-item button color="success">
+        <ion-label>
+          <h3>Task 2</h3>
+        </ion-label>
+        <ion-icon name="checkmark-done-outline"></ion-icon>
+      </ion-item>
+      <ion-item button color="primary">
+        <ion-label>
+          <h3>Task 3</h3>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+
+    <div id="container">
+      <ion-button [routerLink]="['/aggiungi-task']" color="primary">
+        Aggiungi Task
+      </ion-button>
+    </div>
 
 </ion-content>
