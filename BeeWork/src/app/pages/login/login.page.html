@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Login</ion-title>
+    <ion-title>BeeWork</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -9,15 +9,20 @@
   <div class="auth-content">
 
     <!-- Logo -->
-    <div padding-horizontal text-center class="animated fadeInDown">
-      <div class="logo"></div>
-    </div>
+    <img alt="logo" src="assets/images/logo.png" >
 
     <div text-center class="logIn">
       <ion-button [routerLink]="['/home']" color="primary">
-        Log In
+        Accedi
       </ion-button>
     </div>
+
+    <div text-center class="sign">
+      <ion-button [routerLink]="['/home']" color="primary">
+        Registrati
+      </ion-button>
+    </div>
+
   </div>
 </ion-content>
 
