@@ -39,12 +39,14 @@
 
   <ion-item class="commenti">
     <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
-    <ion-input></ion-input>
+    <ion-input inputmode="text" placeholder="scrivi commento qui" [(ngModel)]="myVal"></ion-input>
+    <ion-label color="dark">{{myVal1}}</ion-label>
 
     <ion-button color="medium">
       <ion-icon name="trash-outline"></ion-icon>
     </ion-button>
   </ion-item>
+  <ion-button class="button123" color="primary" (click)="submit()">Commenta</ion-button>
 
   <ion-card>
     <ion-card-header>
