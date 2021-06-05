@@ -8,13 +8,6 @@ import { CalendarComponentOptions } from 'ion2-calendar';
   styleUrls: ['./calendario.page.scss'],
 })
 export class CalendarioPage implements OnInit {
-  dateRange: { from: string; to: string; };
-
-  type: 'string'; // 'string' | 'js-date' | 'moment' | 'time' | 'object'
-
-  optionsRange: CalendarComponentOptions = {
-    pickMode: 'range'
-  };
 
   constructor() { }
 
