@@ -1,20 +1,18 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title size="large">Notifiche</ion-title>
+<ion-header>
+  <ion-toolbar color="primary" text-center>
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="['/home']">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Lista Notifiche</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Notifiche</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
   <ion-card>
-    <ion-card-header>
+    <ion-card-header color="primary">
       <ion-card-title>Notifica 1 <ion-icon name="mail-unread-outline" size="small"></ion-icon></ion-card-title>
-
     </ion-card-header>
 
     <ion-card-content>
@@ -22,7 +20,7 @@
       Mohamed ha modificato l'interfaccia Impostazioni
     </ion-card-content>
 
-    <ion-card-header>
+    <ion-card-header color="primary">
       <ion-card-title>Notifica 2 <ion-icon name="mail-open-outline" size="small"></ion-icon></ion-card-title>
     </ion-card-header>
 
@@ -31,7 +29,7 @@
       Flaviana ha Scritto il codice dell'interfaccia Aggiungi Progetto
     </ion-card-content>
 
-    <ion-card-header>
+    <ion-card-header color="primary">
       <ion-card-title>Notifica 3 <ion-icon name="mail-unread-outline" size="small"></ion-icon></ion-card-title>
     </ion-card-header>
 
@@ -40,7 +38,7 @@
       Angelo ha completato il progetto
     </ion-card-content>
 
-    <ion-card-header>
+    <ion-card-header color="primary">
       <ion-card-title>Notifica 4 <ion-icon name="mail-unread-outline" size="small"></ion-icon></ion-card-title>
     </ion-card-header>
 
@@ -49,7 +47,7 @@
       è stato assegnato un lavoro da parte di  Selene
     </ion-card-content>
 
-    <ion-card-header>
+    <ion-card-header color="primary">
       <ion-card-title>Notifica 5 <ion-icon name="mail-unread-outline" size="small"></ion-icon></ion-card-title>
     </ion-card-header>
 

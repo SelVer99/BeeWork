@@ -12,12 +12,12 @@ export class CalendarioPage implements OnInit {
 
   type: 'string'; // 'string' | 'js-date' | 'moment' | 'time' | 'object'
 
-
-
-  constructor() { }
   optionsRange: CalendarComponentOptions = {
     pickMode: 'range'
   };
+
+  constructor() { }
+
   ngOnInit() {
   }
 
