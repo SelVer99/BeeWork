@@ -19,23 +19,15 @@
         <ion-list>
           <ion-item>
             <ion-label>Notifiche</ion-label>
-            <ion-toggle [(ngModel)]="Notifiche"></ion-toggle>
-
+            <ion-toggle slot="end" checked></ion-toggle>
           </ion-item>
           <ion-item>
-            <ion-label>Tema</ion-label>
-            <ion-radio-group value="light">
-              <ion-item id="radio">
-                <ion-radio id="radio1" slot="start" value="light" color="danger"></ion-radio>
-                <ion-radio  slot="start" value="dark" color="warning"></ion-radio>
-              </ion-item>
-            </ion-radio-group>
+            <ion-label>Tema Dark</ion-label>
+            <ion-toggle slot="end" (ionChange)="toggleTheme($event)"></ion-toggle>
           </ion-item>
         </ion-list>
       </ion-card-content>
     </ion-card>
-
-
 
   <ion-card>
     <ion-card-header>
