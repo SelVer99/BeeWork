@@ -10,11 +10,6 @@ export class AppComponent {
 
   public appPages = [
     {
-      title: 'Home',
-      url: '/home',
-      icon: 'home'
-    },
-    {
       title: 'Profilo Personale',
       url: '/profilo-personale',
       icon: 'person-circle-outline'

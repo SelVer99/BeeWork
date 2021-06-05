@@ -55,7 +55,15 @@ const routes: Routes = [
   {
     path: 'dettagli-task',
     loadChildren: () => import('./pages/dettagli-task/dettagli-task.module').then(m => m.DettagliTaskPageModule)
+  },  {
+    path: 'lista-notifiche',
+    loadChildren: () => import('./pages/lista-notifiche/lista-notifiche.module').then( m => m.ListaNotifichePageModule)
+  },
+  {
+    path: 'registrazione',
+    loadChildren: () => import('./pages/registrazione/registrazione.module').then( m => m.RegistrazionePageModule)
   }
+
 
 
 

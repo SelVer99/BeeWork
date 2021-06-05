@@ -1,5 +1,17 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary" text-center>
+    <ion-buttons slot="start">
+      <ion-back-button icon="chevron-back-outline">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/lista-notifiche']">
+        <ion-icon name="notifications-outline"></ion-icon>
+      </ion-button>
+      <ion-button [routerLink]="['/home']">
+        <ion-icon name="home-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 

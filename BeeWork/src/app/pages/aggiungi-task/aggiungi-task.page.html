@@ -1,8 +1,12 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Nuovo task</ion-title>
+  <ion-toolbar color="primary" text-center>
+    <ion-buttons slot="start">
+      <ion-back-button icon="chevron-back-outline"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Nuovo Task</ion-title>
   </ion-toolbar>
 </ion-header>
+
 <ion-content [fullscreen]="true">
 
   <form [formGroup]="newTaskForm">
