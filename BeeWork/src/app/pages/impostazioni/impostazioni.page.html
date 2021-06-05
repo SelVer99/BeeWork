@@ -19,7 +19,7 @@
         <ion-list>
           <ion-item>
             <ion-label>Notifiche</ion-label>
-            <ion-toggle slot="end" checked></ion-toggle>
+            <ion-toggle slot="end" checked (ionChange)="toggleNotifications($event)"></ion-toggle>
           </ion-item>
           <ion-item>
             <ion-label>Tema Dark</ion-label>

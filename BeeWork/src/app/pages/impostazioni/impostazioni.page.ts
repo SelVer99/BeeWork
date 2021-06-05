@@ -15,9 +15,15 @@ export class ImpostazioniPage implements OnInit {
   toggleTheme(event) {
     if (event.detail.checked) {
       document.body.setAttribute('color-theme','dark');
-    }
-    else {
+    } else {
       document.body.setAttribute('color-theme','light');
     }
   }
+
+  toggleNotifications(event) {
+    if (event.detail.checked) {
+      console.log(event);
+    }
+  }
+
 }
