@@ -6,12 +6,14 @@ import { CalendarioPageRoutingModule } from './calendario-routing.module';
 import { CalendarioPage } from './calendario.page';
 
 import { CalendarModule } from 'ion2-calendar';
+import {TranslateModule} from '@ngx-translate/core';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
+    TranslateModule.forChild(),
     CalendarioPageRoutingModule,
     CalendarModule
   ],
