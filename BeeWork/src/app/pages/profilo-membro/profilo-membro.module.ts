@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { ProfiloMembroPageRoutingModule } from './profilo-membro-routing.module';
 
 import { ProfiloMembroPage } from './profilo-membro.page';
+import {TranslateModule} from '@ngx-translate/core';
 
 @NgModule({
   imports: [
@@ -14,6 +15,7 @@ import { ProfiloMembroPage } from './profilo-membro.page';
     FormsModule,
     ReactiveFormsModule,
     IonicModule,
+    TranslateModule.forChild(),
     ProfiloMembroPageRoutingModule
   ],
   declarations: [ProfiloMembroPage]

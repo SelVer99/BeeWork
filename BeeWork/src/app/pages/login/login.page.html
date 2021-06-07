@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-title>Login</ion-title>
+    <ion-title>{{ 'LOGIN_TITLE' | translate }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -13,13 +13,13 @@
 
     <div text-center class="logIn">
       <ion-button [routerLink]="['/home']" color="primary">
-        Accedi
+        {{ 'LOGIN_BUTTON' | translate }}
       </ion-button>
     </div>
 
     <div text-center class="sign">
       <ion-button [routerLink]="['/registrazione']" color="primary">
-        Registrati
+        {{ 'SIGNUP_BUTTON' | translate }}
       </ion-button>
     </div>
 

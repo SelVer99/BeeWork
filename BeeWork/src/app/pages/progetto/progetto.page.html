@@ -12,7 +12,7 @@
         <ion-icon name="home-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-title>Progetto</ion-title>
+    <ion-title> {{ 'PROGETTO' | translate }} </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -51,6 +51,7 @@
   </button>
 
   <ion-button  class="button button3" [routerLink]="['/lista-task']" expand="block" color="primary" strong="true">
-  Lista task</ion-button>
+    <ion-label> {{ 'LISTA_TASK' | translate }} </ion-label>
+  </ion-button>
 
 </ion-content>

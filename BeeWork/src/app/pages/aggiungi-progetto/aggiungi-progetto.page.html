@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button icon="chevron-back-outline"></ion-back-button>
     </ion-buttons>
-    <ion-title>Nuovo Progetto</ion-title>
+    <ion-title> {{ 'NUOVO_PROGETTO' | translate }} </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -12,22 +12,23 @@
   <form [formGroup]="newProjectForm" (ngSubmit)="submit()">
     <ion-list>
       <ion-item>
-        <ion-label position="floating">Nome</ion-label>
+        <ion-label position="floating"> {{ 'NOME' | translate }} </ion-label>
         <ion-textarea autocapitalize inputmode="text" formControlName="name"></ion-textarea>
       </ion-item>
 
       <ion-item>
-        <ion-label position="floating">Descrizione</ion-label>
+        <ion-label position="floating"> {{ 'DESCRIZIONE' | translate }} </ion-label>
         <ion-textarea inputmode="text" formControlName="description"></ion-textarea>
       </ion-item>
 
       <ion-item>
-        <ion-label>Scadenza</ion-label>
+        <ion-label> {{ 'SCADENZA' | translate }} </ion-label>
         <ion-datetime displayFormat="DD MM YY" placeholder="Seleziona una data" formControlName="expirationDate"></ion-datetime>
       </ion-item>
 
 
-    <ion-button id= "button" [routerLink]="['/progetto']" [disabled]="!newProjectForm.valid" color="primary" expand="block" type="submit">Crea
+    <ion-button id= "button" [routerLink]="['/progetto']" [disabled]="!newProjectForm.valid" color="primary" expand="block" type="submit">
+      <ion-label> {{ 'CREA' | translate }} </ion-label>
     </ion-button>
 
     </ion-list>

@@ -7,12 +7,14 @@ import { IonicModule } from '@ionic/angular';
 import { ProgettiTaskPersonaliPageRoutingModule } from './progetti-task-personali-routing.module';
 
 import { ProgettiTaskPersonaliPage } from './progetti-task-personali.page';
+import {TranslateModule} from '@ngx-translate/core';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
+    TranslateModule.forChild(),
     ProgettiTaskPersonaliPageRoutingModule
   ],
   declarations: [ProgettiTaskPersonaliPage]

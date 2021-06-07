@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { AggiungiTaskPageRoutingModule } from './aggiungi-task-routing.module';
 
 import { AggiungiTaskPage } from './aggiungi-task.page';
+import {TranslateModule} from '@ngx-translate/core';
 
 @NgModule({
   imports: [
@@ -14,6 +15,7 @@ import { AggiungiTaskPage } from './aggiungi-task.page';
     FormsModule,
     ReactiveFormsModule,
     IonicModule,
+    TranslateModule.forChild(),
     AggiungiTaskPageRoutingModule
   ],
   declarations: [AggiungiTaskPage]

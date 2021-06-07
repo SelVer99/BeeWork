@@ -6,12 +6,14 @@ import { IonicModule } from '@ionic/angular';
 import { AggiungiProgettoPageRoutingModule } from './aggiungi-progetto-routing.module';
 
 import { AggiungiProgettoPage } from './aggiungi-progetto.page';
+import {TranslateModule} from '@ngx-translate/core';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
+    TranslateModule.forChild(),
     ReactiveFormsModule,
     AggiungiProgettoPageRoutingModule
   ],

@@ -11,7 +11,7 @@
         <ion-icon name="home-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-title>Task</ion-title>
+    <ion-title> {{ 'TASK' | translate }} </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -57,7 +57,7 @@
       <ion-icon name="trash-outline"></ion-icon>
     </ion-button>
   </ion-item>
-  <ion-button class="button123" color="primary" [disabled]="myVal==''" (click)="submit()">Commenta</ion-button>
+  <ion-button class="button123" color="primary" [disabled]="myVal==''" (click)="submit()">{{ 'COMMENTA' | translate }}</ion-button>
 
   <ion-card>
     <ion-card-header>

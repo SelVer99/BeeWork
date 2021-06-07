@@ -7,12 +7,14 @@ import { IonicModule } from '@ionic/angular';
 import { ListaTaskPageRoutingModule } from './lista-task-routing.module';
 
 import { ListaTaskPage } from './lista-task.page';
+import {TranslateModule} from '@ngx-translate/core';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
+    TranslateModule.forChild(),
     ListaTaskPageRoutingModule
   ],
   declarations: [ListaTaskPage]

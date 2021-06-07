@@ -5,25 +5,29 @@
         <ion-icon name="chevron-back-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-title>Impostazioni</ion-title>
+    <ion-title>{{ 'IMPOSTAZIONI' | translate }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
     <ion-card>
       <ion-card-header>
-        <ion-card-title>Preferenze</ion-card-title>
+        <ion-card-title>{{ 'PREFERENZE' | translate }}</ion-card-title>
       </ion-card-header>
 
       <ion-card-content>
         <ion-list>
           <ion-item>
-            <ion-label>Notifiche</ion-label>
+            <ion-label>{{ 'NOTIFICHE' | translate }}</ion-label>
             <ion-toggle slot="end" checked (ionChange)="toggleNotifications($event)"></ion-toggle>
           </ion-item>
           <ion-item>
-            <ion-label>Tema Dark</ion-label>
+            <ion-label>{{ 'TEMA' | translate }}</ion-label>
             <ion-toggle slot="end" (ionChange)="toggleTheme($event)"></ion-toggle>
+          </ion-item>
+          <ion-item>
+            <ion-label>{{ 'LINGUA' | translate }}</ion-label>
+            <ion-toggle slot="end"></ion-toggle>
           </ion-item>
         </ion-list>
       </ion-card-content>
@@ -31,7 +35,7 @@
 
   <ion-card>
     <ion-card-header>
-      <ion-card-title>Informazioni</ion-card-title>
+      <ion-card-title>{{ 'INFORMAZIONI' | translate }}</ion-card-title>
     </ion-card-header>
 
     <ion-card-content>
@@ -40,7 +44,7 @@
       </ion-item>
         <ion-item>
           <ion-icon name="people-circle-outline"></ion-icon>
-          Team di sviluppo
+          {{ 'TEAM_SVILUPPO' | translate }}
         </ion-item>
             Selene Verna, Flaviana Caroselli, Angelo Casciani, Mohamed Ossama Mohamed Mohamed
       </ion-list>
@@ -49,11 +53,9 @@
 
   <div class="ion-padding">
     <ion-button (click)="Eliminato()" color="primary" expand="block">
-      Elimina Account
+      {{ 'ELIMINA_ACCOUNT' | translate }}
     </ion-button>
     <p>{{Eliminato}}</p>
   </div>
-
-
 
 </ion-content>

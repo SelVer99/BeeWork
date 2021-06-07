@@ -1,0 +1,69 @@
+{
+  "BACK_BUTTON_TEXT": "Back",
+
+  "LOGIN_BUTTON": "Enter",
+  "DONE_BUTTON": "Done",
+  "SAVE_BUTTON": "Save",
+  "CANCEL_BUTTON": "Cancel",
+  "DELETE_BUTTON": "Delete",
+
+  "LOGIN_TITLE": "Login",
+  "LOGIN_ERROR_TITLE": "Login error",
+  "LOGIN_ERROR_SUB_TITLE": "Username and/or password Wrong!",
+
+  "SIGNUP_TITLE": "Registration",
+  "SIGNUP_BUTTON": "Sign Up",
+  "SIGNUP_ERROR_TITLE": "Registration Error",
+
+  "PAGINA_COSTRUZIONE": "Page under construction!!!",
+
+  "USERNAME": "Username",
+  "PASSWORD": "Password",
+  "USERNAME_REQUIRED": "Username required",
+  "PASSWORD_REQUIRED": "Password required",
+
+  "AGGIUNGI_PROGETTO": "Add New Project",
+  "NUOVO_PROGETTO": "New Project",
+  "NUOVO_TASK": "New Task",
+  "NOME": "Name",
+  "DESCRIZIONE": "Description",
+  "SCADENZA": "Deadline",
+  "CREA": "Generate",
+  "SELEZIONA_DATA": "Select a date",
+  "ETICHETTA": "Label",
+  "PRIORITA": "Priotity",
+  "MEMBRI": "Members",
+  "CALENDARIO": "Calendar",
+  "TASK": "Task",
+  "PROGETTO": "Project",
+  "COMMENTA": "Comments",
+  "IMPOSTAZIONI": "Settings",
+  "PREFERENZE": "Preferences",
+  "NOTIFICHE": "Notifications",
+  "TEMA": "Dark Theme",
+  "INFORMAZIONI": "About",
+  "TEAM_SVILUPPO": "Development Team",
+  "ELIMINA_ACCOUNT": "Delete Account",
+  "LISTA_TASK": "Task List",
+  "AGGIUNGI_TASK": "Add Task",
+  "PROFILO_MEMBRO": "Member Profile",
+  "BIO": "Bio",
+  "AGGIORNA_BIO": "Update",
+  "PROFILO_PERSONALE": "Personal Profile",
+  "PROGETTI_PERSONALI": "Personal Projects",
+
+
+
+  "PROFILO_MENU": "Profile",
+  "LOGOUT_MENU": "Logout",
+  "NOTIZIE_TAB": "News",
+  "ORARIO_TAB": "Calendar",
+  "APPELLI_TAB": "Exam sessions",
+  "ESAMI_TAB": "Exams",
+  "LEZIONI_TAB": "Lectures",
+
+  "PROFILO_TITOLO": "Profile",
+  "EMAIL": "Email",
+  "LINGUA": "Language",
+  "EMAIL_REQUIRED": "Email mandatory"
+}

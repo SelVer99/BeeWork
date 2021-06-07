@@ -5,7 +5,7 @@
         <ion-icon name="chevron-back-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-title>Profilo Personale</ion-title>
+    <ion-title> {{ 'PROFILO_PERSONALE' | translate }} </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -41,7 +41,7 @@
   </ion-card>
 
     <ion-button *ngIf="isVisible" id="button" color="primary" (click)="toggleVisibility()">
-      Aggiorna Bio
+      {{ 'AGGIORNA_BIO' | translate }}
     </ion-button>
 
 </ion-content>

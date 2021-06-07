@@ -11,7 +11,7 @@
         <ion-icon name="home-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-title>Lista Task</ion-title>
+    <ion-title> {{ 'LISTA_TASK' | translate }} </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -37,7 +37,7 @@
 
     <div id="container">
       <ion-button [routerLink]="['/aggiungi-task']" color="primary">
-        Aggiungi Task
+        {{ 'AGGIUNGI_TASK' | translate }}
       </ion-button>
     </div>
 
