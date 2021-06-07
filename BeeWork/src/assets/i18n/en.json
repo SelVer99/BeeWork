@@ -6,6 +6,7 @@
   "SAVE_BUTTON": "Save",
   "CANCEL_BUTTON": "Cancel",
   "DELETE_BUTTON": "Delete",
+  "UPDATE_BUTTON": "Update",
 
   "LOGIN_TITLE": "Login",
   "LOGIN_ERROR_TITLE": "Login error",
@@ -52,18 +53,8 @@
   "AGGIORNA_BIO": "Update",
   "PROFILO_PERSONALE": "Personal Profile",
   "PROGETTI_PERSONALI": "Personal Projects",
-
-
-
-  "PROFILO_MENU": "Profile",
-  "LOGOUT_MENU": "Logout",
-  "NOTIZIE_TAB": "News",
-  "ORARIO_TAB": "Calendar",
-  "APPELLI_TAB": "Exam sessions",
-  "ESAMI_TAB": "Exams",
-  "LEZIONI_TAB": "Lectures",
-
-  "PROFILO_TITOLO": "Profile",
+  "PROGETTI_TASK_PERSONALI": "Personal Projects/Tasks",
+  "LOGOUT": "Logout",
   "EMAIL": "Email",
   "LINGUA": "Language",
   "EMAIL_REQUIRED": "Email mandatory"

@@ -53,18 +53,8 @@
   "AGGIORNA_BIO": "Aggiorna",
   "PROFILO_PERSONALE": "Profilo Personale",
   "PROGETTI_PERSONALI": "Progetti Personali",
-
-
-
-  "PROFILO_MENU": "Profilo",
-  "LOGOUT_MENU": "Esci",
-  "NOTIZIE_TAB": "Notizie",
-  "ORARIO_TAB": "Orario",
-  "APPELLI_TAB": "Appelli",
-  "ESAMI_TAB": "Esami",
-  "LEZIONI_TAB": "Lezioni",
-
-  "PROFILO_TITOLO": "Profilo",
+  "PROGETTI_TASK_PERSONALI": "Progetti/Task Personali",
+  "LOGOUT": "Esci",
   "EMAIL": "Email",
   "LINGUA": "Lingua",
   "EMAIL_REQUIRED": "Email obbligatoria"

@@ -14,27 +14,27 @@ import {TemaService} from './services/tema.service';
 export class AppComponent {
   private appPages = [
     {
-      title: 'Profilo Personale',
+      title: 'PROFILO_PERSONALE',
       url: '/profilo-personale',
       icon: 'person-circle-outline'
     },
     {
-      title: 'Progetti/Task Personali',
+      title: 'PROGETTI_TASK_PERSONALI',
       url: '/progetti-task-personali',
       icon: 'hammer-outline'
     },
     {
-      title: 'Calendario',
+      title: 'CALENDARIO',
       url: '/calendario',
       icon: 'calendar-number-outline'
     },
     {
-      title: 'Impostazioni',
+      title: 'IMPOSTAZIONI',
       url: '/impostazioni',
       icon: 'settings-outline'
     },
     {
-      title: 'Log Out',
+      title: 'LOGOUT',
       url: '/login',
       icon: 'log-out-outline'
     }
