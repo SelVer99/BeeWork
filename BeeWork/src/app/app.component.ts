@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import {NavController, Platform} from '@ionic/angular';
+import {SplashScreen} from '@ionic-native/splash-screen/ngx';
 import {LinguaService} from './services/lingua.service';
 import {TranslateService} from '@ngx-translate/core';
 
@@ -40,6 +41,7 @@ export class AppComponent {
 
 
   constructor(private platform: Platform,
+              private splashScreen: SplashScreen,
               private linguaService: LinguaService,
               private translate: TranslateService,
               private navController: NavController) {
