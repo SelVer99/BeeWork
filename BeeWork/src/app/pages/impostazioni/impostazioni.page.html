@@ -27,7 +27,12 @@
           </ion-item>
           <ion-item>
             <ion-label>{{ 'LINGUA' | translate }}</ion-label>
-            <ion-toggle slot="end"></ion-toggle>
+            <ion-button (click)="english()">
+              <ion-label>EN</ion-label>
+            </ion-button>
+            <ion-button (click)="italiano()">
+              <ion-label>IT</ion-label>
+            </ion-button>
           </ion-item>
         </ion-list>
       </ion-card-content>

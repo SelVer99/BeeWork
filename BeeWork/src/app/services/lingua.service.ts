@@ -18,9 +18,7 @@ export class LinguaService {
   italiano: Lingua = {etichetta: 'Italiano', valore: 'it'};
   lingue: Lingua[] = [this.italiano, {etichetta: 'English', valore: 'en'}];
 
-  constructor(private storage: Storage) {
-
-  }
+  constructor(private storage: Storage) {}
 
   getLinguaAttuale(): Observable<string> {
     return fromPromise(this.storage.get(LINGUA));

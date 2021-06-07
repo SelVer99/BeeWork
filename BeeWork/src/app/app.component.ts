@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import {NavController, Platform} from '@ionic/angular';
 import {LinguaService} from './services/lingua.service';
 import {TranslateService} from '@ngx-translate/core';
+import {TemaService} from './services/tema.service';
 
 @Component({
   selector: 'app-root',
@@ -41,6 +42,7 @@ export class AppComponent {
 
   constructor(private platform: Platform,
               private linguaService: LinguaService,
+              private temaService: TemaService,
               private translate: TranslateService,
               private navController: NavController) {
     this.initializeApp();
@@ -49,11 +51,12 @@ export class AppComponent {
   initializeApp() {
     this.platform.ready().then(() => {
       this.initTranslate();
+      this.initTheming();
     });
   }
 
+  // Imposta la lingua di default per la traduzione e la lingua attuale.
   initTranslate() {
-    // Set the default language for translation strings, and the current language.
     const linguaPreferita = this.linguaService.getLinguaPreferita();
     this.translate.setDefaultLang(linguaPreferita);
     this.linguaService.getLinguaAttuale().subscribe((lingua: string) => {
@@ -62,6 +65,21 @@ export class AppComponent {
       } else {
         this.translate.use(linguaPreferita);
         this.linguaService.updateLingua(linguaPreferita);
+      }
+    });
+  }
+
+  // Imposta il tema di default.
+  initTheming() {
+    const temaPreferito = this.temaService.getTemaPreferito();
+    this.temaService.getTemaAttuale().subscribe((tema: string) => {
+      if (tema != null) {
+        document.body.setAttribute('color-theme', tema);
+        this.temaService.updateTema(tema);
+      }
+      else {
+        document.body.setAttribute('color-theme','light');
+        this.temaService.updateTema('light');
       }
     });
   }
