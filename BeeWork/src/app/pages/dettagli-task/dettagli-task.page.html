@@ -26,10 +26,10 @@
       <ion-chip class="priorita" color="danger">
         <ion-label color="danger">urgente</ion-label>
       </ion-chip>
-      <ion-chip class="etichetta" color="tertiary">
-        <ion-label color="tertiary">per prof. Rossi</ion-label>
+      <ion-chip class="etichetta" color="secondary">
+        <ion-label color="secondary">per prof. Rossi</ion-label>
       </ion-chip>
-      <ion-button id="button" color="medium">
+      <ion-button id="button" color="primary">
         <ion-icon name="trash-outline"></ion-icon>
       </ion-button>
     </ion-card-content>
@@ -41,18 +41,18 @@
     <ion-label>14-06-2021</ion-label>
   </ion-chip>
 
-  <ion-list class="membri">
+  <ion-item class="membri" color="light">
     <button class="button btn" [routerLink]="['/profilo-membro']">SV</button>
     <button class="button btn" [routerLink]="['/profilo-membro']">FC</button>
 
-    <button class="button btn">
+    <button ion-button class="button btn" color="primary">
       <ion-icon name="add-outline"></ion-icon>
     </button>
-  </ion-list>
+  </ion-item>
 
-  <ion-item class="commenti">
+  <ion-item class="commenti" >
     <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
-    <ion-input inputmode="text" placeholder="scrivi commento qui" maxlength="100" [(ngModel)]="myVal"></ion-input>
+    <ion-input inputmode="text" color="secondary" placeholder="scrivi commento qui" maxlength="100" [(ngModel)]="myVal"></ion-input>
     <ion-label color="dark">{{myVal1}}</ion-label>
   </ion-item>
   <ion-button class="button123" color="primary" [disabled]="myVal==''" (click)="submit()">{{ 'COMMENTA' | translate }}</ion-button>
