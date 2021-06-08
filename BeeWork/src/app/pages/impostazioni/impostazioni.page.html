@@ -19,11 +19,11 @@
         <ion-list>
           <ion-item>
             <ion-label>{{ 'NOTIFICHE' | translate }}</ion-label>
-            <ion-toggle slot="end" checked (ionChange)="toggleNotifications($event)"></ion-toggle>
+            <ion-toggle slot="end" checked="{{notify}}" (ionChange)="toggleNotifications($event)"></ion-toggle>
           </ion-item>
           <ion-item>
             <ion-label>{{ 'TEMA' | translate }}</ion-label>
-            <ion-toggle slot="end" (ionChange)="toggleTheme($event)"></ion-toggle>
+            <ion-toggle slot="end" checked="{{dark}}" (ionChange)="toggleTheme($event)"></ion-toggle>
           </ion-item>
           <ion-item>
             <ion-label>{{ 'LINGUA' | translate }}</ion-label>

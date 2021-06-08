@@ -74,14 +74,15 @@ export class AppComponent {
   // Imposta il tema di default.
   initTheming() {
     const temaPreferito = this.temaService.getTemaPreferito();
+    document.body.setAttribute('color-theme',temaPreferito);
     this.temaService.getTemaAttuale().subscribe((tema: string) => {
-      if (tema != null) {
+      if (tema !== null) {
         document.body.setAttribute('color-theme', tema);
         this.temaService.updateTema(tema);
       }
       else {
-        document.body.setAttribute('color-theme','light');
-        this.temaService.updateTema('light');
+        document.body.setAttribute('color-theme',temaPreferito);
+        this.temaService.updateTema(temaPreferito);
       }
     });
   }
