@@ -52,7 +52,7 @@
 
   <ion-item class="commenti">
     <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
-    <ion-input inputmode="text" placeholder="scrivi commento qui" [(ngModel)]="myVal"></ion-input>
+    <ion-input inputmode="text" placeholder="scrivi commento qui" maxlength="100" [(ngModel)]="myVal"></ion-input>
     <ion-label color="dark">{{myVal1}}</ion-label>
   </ion-item>
   <ion-button class="button123" color="primary" [disabled]="myVal==''" (click)="submit()">{{ 'COMMENTA' | translate }}</ion-button>
