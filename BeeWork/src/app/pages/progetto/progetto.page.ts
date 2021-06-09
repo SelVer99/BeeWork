@@ -6,6 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./progetto.page.scss'],
 })
 export class ProgettoPage implements OnInit {
+  members = [
+    'fla',
+    'mo',
+    'angelo',
+    'selene',
+    'bob'
+  ];
 
   constructor() { }
 

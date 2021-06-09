@@ -19,7 +19,12 @@
 <ion-content>
   <ion-card>
     <ion-card-header>
+      <ion-item>
       <ion-card-title>nome progetto</ion-card-title>
+        <ion-button class="button5" color="primary">
+          <ion-icon name="trash-outline"></ion-icon>
+        </ion-button>
+      </ion-item>
     </ion-card-header>
 
     <ion-card-content>
@@ -47,7 +52,7 @@
   <button class="button btn" [routerLink]="['/profilo-membro']">FC</button>
 
   <button class="button btn">
-    <ion-icon name="add-outline"></ion-icon>
+    <ion-icon name="pencil-outline"></ion-icon>
   </button>
 
   <ion-button  class="button button3" [routerLink]="['/lista-task']" expand="block" color="primary" strong="true">
