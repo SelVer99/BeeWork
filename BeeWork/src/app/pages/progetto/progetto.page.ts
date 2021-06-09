@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActionSheetController } from '@ionic/angular';
 
 @Component({
   selector: 'app-progetto',
@@ -6,17 +7,33 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./progetto.page.scss'],
 })
 export class ProgettoPage implements OnInit {
-  members = [
-    'fla',
-    'mo',
-    'angelo',
-    'selene',
-    'bob'
-  ];
 
-  constructor() { }
+
+  constructor(
+    public actionsheetCtrl: ActionSheetController
+  ) { }
 
   ngOnInit() {
   }
-
+  async openMenu() {
+    const actionSheet = await this.actionsheetCtrl.create({
+      header: 'nome membro',
+      mode: 'ios',
+      buttons: [
+        {
+          text: 'Rimuovi Membro',
+          role: 'destructive',
+          handler: () => {
+            console.log('Rimuovi Membro clicked');
+          }
+        },{
+          text: 'Visualizza Profilo',
+          handler: () => {
+            console.log('Visualizza Profilo clicked');
+          }
+        }
+      ]
+    });
+    await actionSheet.present();
+  }
 }

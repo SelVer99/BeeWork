@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActionSheetController } from '@ionic/angular';
 
 @Component({
   selector: 'app-dettagli-task',
@@ -9,7 +10,7 @@ export class DettagliTaskPage implements OnInit {
   myVal = '';
   myVal1 = '';
 
-  constructor() { }
+  constructor(public actionsheetCtrl: ActionSheetController) { }
 
 
   ngOnInit() {
@@ -19,6 +20,28 @@ export class DettagliTaskPage implements OnInit {
   submit(){
     this.myVal1 = this.myVal;
     this.myVal='';
+  }
+
+  async openMenu() {
+    const actionSheet = await this.actionsheetCtrl.create({
+      header: 'nome membro',
+      mode: 'ios',
+      buttons: [
+        {
+          text: 'Rimuovi Membro',
+          role: 'destructive',
+          handler: () => {
+            console.log('Rimuovi Membro clicked');
+          }
+        },{
+          text: 'Visualizza Profilo',
+          handler: () => {
+            console.log('Visualizza Profilo clicked');
+          }
+        }
+      ]
+    });
+    await actionSheet.present();
   }
 
 

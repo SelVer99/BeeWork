@@ -45,12 +45,8 @@
   </ion-chip>
 
   <ion-item class="membri" color="light">
-    <ion-button class="button btn" [routerLink]="['/profilo-membro']" color="secondary">SV</ion-button>
-    <ion-button class="button btn" [routerLink]="['/profilo-membro']" color="secondary">FC</ion-button>
-
-    <ion-button ion-button class="button btn" color="secondary">
-      <ion-icon name="add-outline"></ion-icon>
-    </ion-button>
+    <button class="button btn" (click)="openMenu()">SV</button>
+    <button class="button btn" (click)="openMenu()">FC</button>
   </ion-item>
 
   <ion-item class="commenti" >
