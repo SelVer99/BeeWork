@@ -48,11 +48,14 @@
     <ion-progress-bar color="success" value="0.5"></ion-progress-bar>
   </ion-list>
 
-  <button class="button btn" [routerLink]="['/profilo-membro']">SV</button>
-  <button class="button btn" [routerLink]="['/profilo-membro']">FC</button>
+  <button class="button btn" [routerLink]="['/profilo-membro']" color="secondary">SV</button>
+  <button class="button btn" [routerLink]="['/profilo-membro']" color="secondary">FC</button>
 
-  <button class="button btn">
+  <button class="btn" color="secondary" icon-only>
     <ion-icon name="pencil-outline"></ion-icon>
+    <ion-select multiple="true" >
+      <ion-select-option *ngFor="let member of members" [value]="member">{{ member }} </ion-select-option>
+    </ion-select>
   </button>
 
   <ion-button  class="button button3" [routerLink]="['/lista-task']" expand="block" color="primary" strong="true">
