@@ -26,6 +26,7 @@ export class DettagliTaskPage implements OnInit {
     const actionSheet = await this.actionsheetCtrl.create({
       header: 'nome membro',
       mode: 'ios',
+      cssClass:'opzioni',
       buttons: [
         {
           text: 'Rimuovi Membro',
