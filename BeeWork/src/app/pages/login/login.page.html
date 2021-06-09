@@ -5,23 +5,52 @@
 </ion-header>
 
 <ion-content>
-  <div class="theme-bg"></div>
+
   <div class="auth-content">
 
     <!-- Logo -->
     <img alt="logo" src="assets/images/logo.png" >
 
+    <form>
+      <ion-item lines="full">
+        <ion-icon name="mail-outline" slot="start"></ion-icon>
+        <ion-label position="floating">
+          Email
+        </ion-label>
+        <ion-input type="text" required></ion-input>
+      </ion-item>
+
+      <ion-item lines="full">
+        <ion-icon name="key-outline" slot="start"></ion-icon>
+        <ion-label position="floating">
+          Password
+        </ion-label>
+        <ion-input type="password" required></ion-input>
+      </ion-item>
+
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" color="primary" expand="block">
+            {{ 'LOGIN_BUTTON' | translate }}
+          </ion-button>
+
+          <ion-button [routerLink]="['/registrazione']" color="primary" expand="block">
+            {{ 'SIGNUP_BUTTON' | translate }}
+          </ion-button>
+
+          <a [routerLink]="['/forgot-password']" class="small-text">Forgot Password?</a>
+        </ion-col>
+      </ion-row>
+    </form>
+
+
     <div text-center class="logIn">
-      <ion-button [routerLink]="['/home']" color="primary">
-        {{ 'LOGIN_BUTTON' | translate }}
+      <ion-button [routerLink]="['/home']" color="primary" expand="block">
+        Home
       </ion-button>
     </div>
 
-    <div text-center class="sign">
-      <ion-button [routerLink]="['/registrazione']" color="primary">
-        {{ 'SIGNUP_BUTTON' | translate }}
-      </ion-button>
-    </div>
+
 
   </div>
 </ion-content>
