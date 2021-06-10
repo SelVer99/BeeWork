@@ -1,9 +1,12 @@
+import { Commento } from './commento.model';
+
 export class Task {
   id: number;
   nome: string;
   scadenza: Date;
-  priorita: number;
+  priorita: string;
   completato: boolean;
   descrizione: string;
-  commenti: string;
+  etichetta: string;
+  commenti: Array<Commento>;
 }
