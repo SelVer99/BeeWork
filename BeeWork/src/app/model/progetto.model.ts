@@ -1,4 +1,5 @@
 import { Utente } from './utente.model';
+import { Task } from './task.model';
 
 export class Progetto {
   id: number;
@@ -6,5 +7,6 @@ export class Progetto {
   percentuale: number;
   scadenza: Date;
   descrizione: string;
-  team: Array<Utente>;
+  membri: Array<Utente>;
+  listaTask: Array<Task>;
 }

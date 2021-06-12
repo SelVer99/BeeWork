@@ -1,4 +1,5 @@
 import { Commento } from './commento.model';
+import {Utente} from "./utente.model";
 
 export class Task {
   id: number;
@@ -9,4 +10,5 @@ export class Task {
   descrizione: string;
   etichetta: string;
   commenti: Array<Commento>;
+  listaMembri: Array<Utente>;
 }
