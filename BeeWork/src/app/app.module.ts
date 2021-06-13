@@ -38,9 +38,9 @@ export function createTranslateLoader(http: HttpClient) {
     IonicStorageModule.forRoot({
       name: 'beework_db',
       driverOrder: ['indexeddb', 'sqlite', 'websql']
-    })],
-  providers: [
-    SplashScreen,
+    })
+  ],
+  providers: [SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy},
     httpInterceptorProviders
   ],
