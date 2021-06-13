@@ -8,6 +8,7 @@ import {BehaviorSubject, Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 import {Token} from '../model/Token.model';
 import {LoginForm} from '../model/LoginForm.model';
+import {RegistrazioneForm} from "../model/RegistrazioneForm.model";
 
 @Injectable({
   providedIn: 'root'
@@ -36,6 +37,10 @@ export class UtenteService {
 
   isLogged(): Observable<boolean> {
     return this.loggedIn$.asObservable();
+  }
+
+  registrazione(formData: RegistrazioneForm): Observable<any> {
+    return this.http.post(URL.REGISTRAZIONE, formData);
   }
 
   // DA RIVEDERE con il server

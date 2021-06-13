@@ -13,19 +13,19 @@
   <!-- Logo -->
   <img alt="logo" src="assets/images/logo.png" >
 
-  <form>
+  <form [formGroup]="registrazioneForm">
     <ion-item lines="full">
       <ion-icon name="person-circle-outline" slot="start"></ion-icon>
       <ion-label position="floating">
         Username
       </ion-label>
-      <ion-input type="text" required></ion-input>
+      <ion-input type="text" required formControlName="username"></ion-input>
 
       <ion-label position="floating">Nome</ion-label>
-      <ion-input type="text" required></ion-input>
+      <ion-input type="text" required formControlName="nome"></ion-input>
 
       <ion-label position="floating">Cognome</ion-label>
-      <ion-input type="text" required></ion-input>
+      <ion-input type="text" required formControlName="cognome"></ion-input>
     </ion-item>
 
 
@@ -34,7 +34,7 @@
       <ion-label position="floating">
         Email
       </ion-label>
-      <ion-input type="text" required></ion-input>
+      <ion-input type="text" required formControlName="email"></ion-input>
     </ion-item>
 
     <ion-item lines="full">
@@ -42,12 +42,12 @@
       <ion-label position="floating">
         Password
       </ion-label>
-      <ion-input type="password" required></ion-input>
+      <ion-input type="password" required formControlName="password"></ion-input>
     </ion-item>
 
     <ion-row>
       <ion-col>
-        <ion-button [routerLink]="['/registrazione']" color="primary" expand="block">
+        <ion-button [routerLink]="['/registrazione']" color="primary" expand="block" (click)="onRegister()">
           {{ 'SIGNUP_BUTTON' | translate }}
         </ion-button>
       </ion-col>
