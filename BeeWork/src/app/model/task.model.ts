@@ -1,5 +1,5 @@
 import { Commento } from './commento.model';
-import {Utente} from "./utente.model";
+import {Utente} from './utente.model';
 
 export class Task {
   id: number;

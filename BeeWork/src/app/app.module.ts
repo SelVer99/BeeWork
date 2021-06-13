@@ -13,6 +13,8 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
+import {httpInterceptorProviders} from './interceptors';
+
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -20,7 +22,11 @@ export function createTranslateLoader(http: HttpClient) {
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, IonicStorageModule.forRoot(),TranslateModule.forRoot(),
+  imports: [BrowserModule,
+    IonicModule.forRoot(),
+    AppRoutingModule,
+    IonicStorageModule.forRoot(),
+    TranslateModule.forRoot(),
     HttpClientModule,
     TranslateModule.forRoot({
       loader: {
@@ -28,8 +34,16 @@ export function createTranslateLoader(http: HttpClient) {
         useFactory: (createTranslateLoader),
         deps: [HttpClient]
       }
+    }),
+    IonicStorageModule.forRoot({
+      name: 'beework_db',
+      driverOrder: ['indexeddb', 'sqlite', 'websql']
     })],
-  providers: [SplashScreen, { provide: RouteReuseStrategy, useClass: IonicRouteStrategy}],
+  providers: [
+    SplashScreen,
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy},
+    httpInterceptorProviders
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

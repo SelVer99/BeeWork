@@ -11,26 +11,32 @@
     <!-- Logo -->
     <img alt="logo" src="assets/images/logo.png" >
 
-    <form>
+    <form [formGroup]="loginFormModel">
       <ion-item lines="full">
         <ion-icon name="mail-outline" slot="start"></ion-icon>
         <ion-label position="floating">
-          Email
+          {{ 'EMAIL' | translate }}
         </ion-label>
-        <ion-input type="text" required></ion-input>
+        <ion-input color="secondary" type="email" formControlName="email"></ion-input>
       </ion-item>
+      <p ion-text class="text08" *ngIf="loginFormModel.get('email').touched && loginFormModel.get('email').invalid">
+        <ion-text color="danger">{{ 'EMAIL_REQUIRED' | translate }}</ion-text>
+      </p>
 
       <ion-item lines="full">
         <ion-icon name="key-outline" slot="start"></ion-icon>
         <ion-label position="floating">
-          Password
+          {{ 'PASSWORD' | translate }}
         </ion-label>
-        <ion-input type="password" required></ion-input>
+        <ion-input color="secondary" type="password" formControlName="password"></ion-input>
       </ion-item>
+      <p ion-text class="text08" *ngIf="loginFormModel.get('password').touched && loginFormModel.get('password').invalid">
+        <ion-text color="danger">{{ 'PASSWORD_REQUIRED' | translate }}</ion-text>
+      </p>
 
       <ion-row>
         <ion-col>
-          <ion-button type="submit" color="primary" expand="block">
+          <ion-button icon-left size="medium" expand="full" shape="round" color="primary" (click)="onLogin()" [disabled]="!loginFormModel.valid" tappable>
             {{ 'LOGIN_BUTTON' | translate }}
           </ion-button>
 

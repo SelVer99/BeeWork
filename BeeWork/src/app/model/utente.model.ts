@@ -1,5 +1,5 @@
 import { Task } from './task.model';
-import {Progetto} from "./progetto.model";
+import {Progetto} from './progetto.model';
 
 export class Utente {
   id: number;

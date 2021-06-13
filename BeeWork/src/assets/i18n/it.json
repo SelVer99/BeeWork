@@ -10,7 +10,7 @@
 
   "LOGIN_TITLE": "Login",
   "LOGIN_ERROR_TITLE": "Errore Login",
-  "LOGIN_ERROR_SUB_TITLE": "Username e/o password errate!",
+  "LOGIN_ERROR_SUB_TITLE": "Email e/o password errate!",
 
   "SIGNUP_TITLE": "Registrazione",
   "SIGNUP_BUTTON": "Registrati",
@@ -18,9 +18,9 @@
 
   "PAGINA_COSTRUZIONE": "Pagina in costruzione!!!",
 
-  "USERNAME": "Username",
+  "EMAIL": "Email",
   "PASSWORD": "Password",
-  "USERNAME_REQUIRED": "Username obbligatorio",
+  "EMAIL_REQUIRED": "Email obbligatoria",
   "PASSWORD_REQUIRED": "Password obbligatorio",
 
   "AGGIUNGI_PROGETTO": "Aggiungi Progetto",
@@ -57,5 +57,4 @@
   "LOGOUT": "Esci",
   "EMAIL": "Email",
   "LINGUA": "Lingua",
-  "EMAIL_REQUIRED": "Email obbligatoria"
 }
