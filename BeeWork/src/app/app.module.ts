@@ -11,7 +11,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import {HTTP_INTERCEPTORS, HttpClient, HttpClientModule} from '@angular/common/http';
-import {TokenService} from './services/token.service';
+import { TokenService } from './services/token-interceptor.service';
+
 
 
 export const createTranslateLoader = (http: HttpClient) => new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -26,14 +27,14 @@ export const createTranslateLoader = (http: HttpClient) => new TranslateHttpLoad
     AppRoutingModule,
     HttpClientModule,
     IonicStorageModule.forRoot(),
-    TranslateModule.forRoot(),
-    // TranslateModule.forRoot({
-    //   loader: {
-    //     provide: TranslateLoader,
-    //     useFactory: (createTranslateLoader),
-    //     deps: [HttpClient]
-    //   }
-    // }),
+    // TranslateModule.forRoot(),
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: (createTranslateLoader),
+        deps: [HttpClient]
+      }
+    }),
   ],
   providers: [
     SplashScreen,

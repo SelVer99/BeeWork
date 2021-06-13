@@ -11,12 +11,13 @@ import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {createTranslateLoader} from '../../app.module';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    ImpostazioniPageRoutingModule
-  ],
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        ImpostazioniPageRoutingModule,
+        TranslateModule
+    ],
   declarations: [ImpostazioniPage]
 })
 export class ImpostazioniPageModule {}
