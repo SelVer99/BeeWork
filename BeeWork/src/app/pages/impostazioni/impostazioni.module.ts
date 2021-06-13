@@ -8,7 +8,6 @@ import { ImpostazioniPageRoutingModule } from './impostazioni-routing.module';
 
 import { ImpostazioniPage } from './impostazioni.page';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
-import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {createTranslateLoader} from '../../app.module';
 
 @NgModule({
@@ -16,15 +15,7 @@ import {createTranslateLoader} from '../../app.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    ImpostazioniPageRoutingModule,
-    HttpClientModule,
-    TranslateModule.forChild({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: (createTranslateLoader),
-        deps: [HttpClient]
-      }
-    })
+    ImpostazioniPageRoutingModule
   ],
   declarations: [ImpostazioniPage]
 })

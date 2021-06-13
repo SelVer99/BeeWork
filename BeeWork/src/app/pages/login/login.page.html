@@ -14,25 +14,25 @@
     <form [formGroup]="loginFormModel">
       <ion-item lines="full">
         <ion-icon name="mail-outline" slot="start"></ion-icon>
-        <ion-label position="floating">
-          {{ 'EMAIL' | translate }}
-        </ion-label>
-        <ion-input color="secondary" type="email" formControlName="email"></ion-input>
+<!--        <ion-label>-->
+<!--          {{ 'EMAIL' | translate }}-->
+<!--        </ion-label>-->
+        <ion-input color="secondary" type="email" formControlName="email" placeholder="{{'EMAIL' | translate}}"></ion-input>
       </ion-item>
-      <p ion-text class="text08" *ngIf="loginFormModel.get('email').touched && loginFormModel.get('email').invalid">
-        <ion-text color="danger">{{ 'EMAIL_REQUIRED' | translate }}</ion-text>
+      <p ion-text class="text08">
+        <ion-text color="danger" *ngIf="loginFormModel.errors">{{ 'EMAIL_REQUIRED' | translate }}</ion-text>
       </p>
 
       <ion-item lines="full">
         <ion-icon name="key-outline" slot="start"></ion-icon>
-        <ion-label position="floating">
-          {{ 'PASSWORD' | translate }}
-        </ion-label>
-        <ion-input color="secondary" type="password" formControlName="password"></ion-input>
+<!--        <ion-label position="floating">-->
+<!--          {{ 'PASSWORD' | translate }}-->
+<!--        </ion-label>-->
+        <ion-input color="secondary" type="password" formControlName="password" placeholder="{{ 'PASSWORD' | translate }}"></ion-input>
       </ion-item>
-      <p ion-text class="text08" *ngIf="loginFormModel.get('password').touched && loginFormModel.get('password').invalid">
-        <ion-text color="danger">{{ 'PASSWORD_REQUIRED' | translate }}</ion-text>
-      </p>
+<!--      <p ion-text class="text08" *ngIf="loginFormModel.get('password').touched && loginFormModel.get('password').invalid">-->
+<!--        <ion-text color="danger">{{ 'PASSWORD_REQUIRED' | translate }}</ion-text>-->
+<!--      </p>-->
 
       <ion-row>
         <ion-col>

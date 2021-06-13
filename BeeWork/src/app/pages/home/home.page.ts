@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {ProgettiService} from "../../services/progetti.service";
 import {Observable} from "rxjs";
+import {Storage} from "@ionic/storage";
+import {AUTH_TOKEN} from "../../constants";
 
 
 @Component({
@@ -12,7 +14,7 @@ export class HomePage implements OnInit{
 
   progetti$: Observable<any>;
 
-  constructor(private progettiService: ProgettiService) {}
+  constructor(private progettiService: ProgettiService, private storage: Storage) {}
 
   ngOnInit(): void {
     this.progetti$ = this.progettiService.getProgetti();

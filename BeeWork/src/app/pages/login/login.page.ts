@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {AlertController, NavController} from '@ionic/angular';
-import {Account, UtenteService} from '../../services/utente.service';
-import {Utente} from '../../model/utente.model';
+import {UtenteService} from '../../services/utente.service';
 import {HttpErrorResponse} from '@angular/common/http';
 import {TranslateService} from '@ngx-translate/core';
+import {Token} from '../../model/Token.model';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +12,7 @@ import {TranslateService} from '@ngx-translate/core';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-  private loginFormModel: FormGroup;
+  loginFormModel: FormGroup;
   private loginTitle: string;
   private loginSubTitle: string;
 
@@ -24,22 +24,21 @@ export class LoginPage implements OnInit {
 
   ngOnInit() {
     this.loginFormModel = this.formBuilder.group({
-      email: ['angelo@gmail.com', Validators.compose([
+      email: ['', [
         Validators.required,
-        Validators.maxLength(30),
-        Validators.minLength(8)
-      ])],
-      password: ['lalala', Validators.compose([
+        Validators.email
+      ]],
+      password: ['', [
         Validators.required,
         Validators.maxLength(30),
         Validators.minLength(5)
-      ])]
+      ]]
     });
   }
 
+
   onLogin() {
-    const account: Account = this.loginFormModel.value;
-    this.utenteService.login(account).subscribe((utente: Utente) => {
+    this.utenteService.login(this.loginFormModel.value).subscribe(() => {
         this.loginFormModel.reset();
         this.navController.navigateRoot('home');
       },
@@ -63,11 +62,11 @@ export class LoginPage implements OnInit {
   }
 
   private initTranslate() {
-    this.translateService.get('LOGIN_ERROR_SUB_TITLE').subscribe((data) => {
+    this.translateService.get('Credenziali errate!').subscribe((data) => {
       this.loginSubTitle = data;
     });
-    this.translateService.get('LOGIN_ERROR_TITLE').subscribe((data) => {
-      this.loginTitle = data;
-    });
+    // this.translateService.get('LOGIN_ERROR_TITLE').subscribe((data) => {
+    //   this.loginTitle = data;
+    // });
   }
 }

@@ -1,48 +1,45 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
-
+import { IonicStorageModule } from '@ionic/storage';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import {SplashScreen} from '@ionic-native/splash-screen/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
-import { IonicStorageModule } from '@ionic/storage-angular';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClient, HttpClientModule} from '@angular/common/http';
+import {TokenService} from './services/token.service';
 
-import {httpInterceptorProviders} from './interceptors';
 
-export function createTranslateLoader(http: HttpClient) {
-  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
-}
+export const createTranslateLoader = (http: HttpClient) => new TranslateHttpLoader(http, './assets/i18n/', '.json');
+
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule,
+  imports: [
+    BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
+    HttpClientModule,
     IonicStorageModule.forRoot(),
     TranslateModule.forRoot(),
-    HttpClientModule,
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: (createTranslateLoader),
-        deps: [HttpClient]
-      }
-    }),
-    IonicStorageModule.forRoot({
-      name: 'beework_db',
-      driverOrder: ['indexeddb', 'sqlite', 'websql']
-    })
+    // TranslateModule.forRoot({
+    //   loader: {
+    //     provide: TranslateLoader,
+    //     useFactory: (createTranslateLoader),
+    //     deps: [HttpClient]
+    //   }
+    // }),
   ],
-  providers: [SplashScreen,
+  providers: [
+    SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy},
-    httpInterceptorProviders
+    { provide: HTTP_INTERCEPTORS, useClass: TokenService, multi: true }
+
   ],
   bootstrap: [AppComponent],
 })

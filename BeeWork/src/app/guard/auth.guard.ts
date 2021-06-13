@@ -8,14 +8,12 @@ import {map, take} from 'rxjs/operators';
 @Injectable({
     providedIn: 'root'
 })
-export class AuthGuard implements CanActivate, CanActivateChild {
+export class AuthGuard implements CanActivate {
     constructor(private utenteService: UtenteService, private navController: NavController) {}
 
     canActivate(): Observable<boolean> {
         return this.utenteService.isLogged().pipe(
-                take(1),
                 map((isLoggedIn: boolean) => {
-                    console.log(isLoggedIn);
                     if (!isLoggedIn) {
                         this.navController.navigateRoot('login');
                         return false;
@@ -25,7 +23,4 @@ export class AuthGuard implements CanActivate, CanActivateChild {
             );
     }
 
-    canActivateChild(): Observable<boolean> {
-        return this.canActivate();
-    }
 }

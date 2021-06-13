@@ -6,8 +6,6 @@ import {LinguaService} from './services/lingua.service';
 import {TranslateService} from '@ngx-translate/core';
 import {TemaService} from './services/tema.service';
 import {UtenteService} from './services/utente.service';
-import {Utente} from './model/utente.model';
-import {BehaviorSubject} from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -22,7 +20,6 @@ export class AppComponent implements OnInit {
     { title: 'IMPOSTAZIONI', url: '/impostazioni', icon: 'settings-outline'},
     { title: 'LOGOUT', url: '/login', icon: 'log-out-outline'}
   ];
-  private utente$: BehaviorSubject<Utente>;
 
   constructor(private platform: Platform,
               private splashScreen: SplashScreen,
@@ -35,8 +32,6 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.utente$ = this.utenteService.getUtente();
-    this.navController.navigateRoot('home');
   }
 
   logout() {
