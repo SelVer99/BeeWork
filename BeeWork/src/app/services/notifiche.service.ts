@@ -4,6 +4,7 @@ import {Storage} from '@ionic/storage';
 import {NOTIFICHE} from '../constants';
 import {Observable} from 'rxjs';
 import {fromPromise} from 'rxjs/internal-compatibility';
+import {HttpClient} from "@angular/common/http";
 
 export class Notifiche {
   etichetta: string;
@@ -18,7 +19,7 @@ export class NotificheService {
   notifyMe: Notifiche = {etichetta: 'NotificheON', valore: 'on'};
   notifiche: Notifiche[] = [this.notifyMe, {etichetta: 'NotificheOFF', valore: 'off'}];
 
-  constructor(private storage: Storage) {}
+  constructor(private storage: Storage, private http: HttpClient) {}
 
   getNotificheAttuale(): Observable<string> {
     return fromPromise(this.storage.get(NOTIFICHE));
@@ -28,8 +29,8 @@ export class NotificheService {
     return this.notifyMe.valore;
   }
 
-  getNotifiche(): Notifiche[] {
-    return this.notifiche;
+  getNotifiche(): Observable<any> {
+    return this.http.get('http://localhost:8080/utenti/3/notifiche');
   }
 
   updateNotifiche(nuovaScelta: string) {

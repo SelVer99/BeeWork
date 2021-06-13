@@ -10,51 +10,17 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-card>
+  <ion-card *ngFor="let notifica of (notifiche$ | async)">
+
     <ion-card-header color="primary">
-      <ion-card-title>Notifica 1 <ion-icon name="mail-unread-outline" size="small"></ion-icon></ion-card-title>
+      <ion-card-title>{{ notifica['nome'] }}<ion-icon name="mail-unread-outline" size="small"></ion-icon></ion-card-title>
     </ion-card-header>
 
     <ion-card-content>
       <ion-icon name="albums-outline"></ion-icon>
-      Mohamed ha modificato l'interfaccia Impostazioni
+      {{ notifica['descrizione'] }}
     </ion-card-content>
 
-    <ion-card-header color="primary">
-      <ion-card-title>Notifica 2 <ion-icon name="mail-open-outline" size="small"></ion-icon></ion-card-title>
-    </ion-card-header>
-
-    <ion-card-content>
-      <ion-icon name="albums-outline"></ion-icon>
-      Flaviana ha Scritto il codice dell'interfaccia Aggiungi Progetto
-    </ion-card-content>
-
-    <ion-card-header color="primary">
-      <ion-card-title>Notifica 3 <ion-icon name="mail-unread-outline" size="small"></ion-icon></ion-card-title>
-    </ion-card-header>
-
-    <ion-card-content>
-      <ion-icon name="albums-outline"></ion-icon>
-      Angelo ha completato il progetto
-    </ion-card-content>
-
-    <ion-card-header color="primary">
-      <ion-card-title>Notifica 4 <ion-icon name="mail-unread-outline" size="small"></ion-icon></ion-card-title>
-    </ion-card-header>
-
-    <ion-card-content>
-      <ion-icon name="albums-outline"></ion-icon>
-      è stato assegnato un lavoro da parte di  Selene
-    </ion-card-content>
-
-    <ion-card-header color="primary">
-      <ion-card-title>Notifica 5 <ion-icon name="mail-unread-outline" size="small"></ion-icon></ion-card-title>
-    </ion-card-header>
-
-    <ion-card-content>
-      <ion-icon name="albums-outline"></ion-icon>
-      Progetto sta per scadere
-    </ion-card-content>
   </ion-card>
 </ion-content>
 

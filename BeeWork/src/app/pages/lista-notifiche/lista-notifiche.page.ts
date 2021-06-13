@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Observable} from "rxjs";
+import {NotificheService} from "../../services/notifiche.service";
 
 @Component({
   selector: 'app-lista-notifiche',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListaNotifichePage implements OnInit {
 
-  constructor() { }
+  notifiche$: Observable<any>;
+
+  constructor(private notificheService: NotificheService) { }
 
   ngOnInit() {
+    this.notifiche$ = this.notificheService.getNotifiche();
   }
 
 }
