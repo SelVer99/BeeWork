@@ -18,6 +18,7 @@
 
   "PAGINA_COSTRUZIONE": "Page under construction!!!",
 
+  "USERNAME": "Username",
   "EMAIL": "Email",
   "PASSWORD": "Password",
   "EMAIL_REQUIRED": "Email mandatory",
@@ -27,6 +28,7 @@
   "NUOVO_PROGETTO": "New Project",
   "NUOVO_TASK": "New Task",
   "NOME": "Name",
+  "COGNOME": "Surname",
   "DESCRIZIONE": "Description",
   "SCADENZA": "Deadline",
   "CREA": "Generate",
@@ -56,5 +58,5 @@
   "PROGETTI_TASK_PERSONALI": "Personal Projects/Tasks",
   "LOGOUT": "Logout",
   "EMAIL": "Email",
-  "LINGUA": "Language",
+  "LINGUA": "Language"
 }

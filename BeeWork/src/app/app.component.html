@@ -1,6 +1,6 @@
 <ion-app>
   <ion-split-pane contentId="main">
-    <!-- Begin Side Menu -->
+    <!-- Inizio Menu Laterale -->
     <ion-menu contentId="main">
       <ion-header>
         <ion-toolbar color="primary">
@@ -9,18 +9,20 @@
       </ion-header>
       <ion-content>
         <ion-list>
-          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
-            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]" color="secondary">
+          <ion-menu-toggle auto-hide="false">
+            <ion-item *ngFor="let p of appPages" [routerDirection]="'root'" [routerLink]="[p.url]" tappable>
               <ion-icon slot="start" [name]="p.icon"></ion-icon>
               <ion-label>{{p.title | translate }}</ion-label>
             </ion-item>
-            <ion-button fill="solid" size="small" color="light" (click)="logout()">
-              <ion-icon name="log-out-outline"></ion-icon>{{'LOGOUT' | translate}}</ion-button>
+            <ion-item button (click)="logout()">
+              <ion-icon slot="start" name="log-out-outline"></ion-icon>
+              <ion-label>{{'LOGOUT'  | translate }}</ion-label>
+            </ion-item>
           </ion-menu-toggle>
         </ion-list>
       </ion-content>
     </ion-menu>
-    <!-- End Side Menu -->
+    <!-- Fine Menu Laterale -->
     <ion-router-outlet id="main"></ion-router-outlet>
   </ion-split-pane>
 </ion-app>

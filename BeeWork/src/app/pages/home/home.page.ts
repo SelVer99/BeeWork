@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {ProgettiService} from "../../services/progetti.service";
-import {Observable} from "rxjs";
-import {Storage} from "@ionic/storage";
-import {AUTH_TOKEN} from "../../constants";
+import {ProgettiService} from '../../services/progetti.service';
+import {Observable} from 'rxjs';
+import {Storage} from '@ionic/storage';
+import {AUTH_TOKEN} from '../../constants';
 
 
 @Component({

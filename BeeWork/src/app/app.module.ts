@@ -27,7 +27,6 @@ export const createTranslateLoader = (http: HttpClient) => new TranslateHttpLoad
     AppRoutingModule,
     HttpClientModule,
     IonicStorageModule.forRoot(),
-    // TranslateModule.forRoot(),
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -35,6 +34,10 @@ export const createTranslateLoader = (http: HttpClient) => new TranslateHttpLoad
         deps: [HttpClient]
       }
     }),
+    IonicStorageModule.forRoot({
+      name: 'beework_db',
+      driverOrder: ['indexeddb', 'sqlite', 'websql']
+    })
   ],
   providers: [
     SplashScreen,

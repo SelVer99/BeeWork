@@ -16,33 +16,27 @@
   <form [formGroup]="registrazioneForm">
     <ion-item lines="full">
       <ion-icon name="person-circle-outline" slot="start"></ion-icon>
-      <ion-label position="floating">
-        Username
-      </ion-label>
-      <ion-input type="text" required formControlName="username"></ion-input>
+      <ion-input type="text" required formControlName="username" placeholder="{{ 'USERNAME' | translate }}"></ion-input>
+    </ion-item>
 
-      <ion-label position="floating">Nome</ion-label>
-      <ion-input type="text" required formControlName="nome"></ion-input>
-
-      <ion-label position="floating">Cognome</ion-label>
-      <ion-input type="text" required formControlName="cognome"></ion-input>
+    <ion-item lines="full">
+      <ion-icon name="person-outline" slot="start"></ion-icon>
+      <ion-input type="text" required formControlName="nome" placeholder="{{ 'NOME' | translate }}"></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-icon name="person-outline" slot="start"></ion-icon>
+      <ion-input type="text" required formControlName="cognome" placeholder="{{ 'COGNOME' | translate }}"></ion-input>
     </ion-item>
 
 
     <ion-item lines="full">
       <ion-icon name="mail-outline" slot="start"></ion-icon>
-      <ion-label position="floating">
-        Email
-      </ion-label>
-      <ion-input type="text" required formControlName="email"></ion-input>
+      <ion-input type="text" required formControlName="email" placeholder="{{ 'EMAIL' | translate }}"></ion-input>
     </ion-item>
 
     <ion-item lines="full">
       <ion-icon name="key-outline" slot="start"></ion-icon>
-      <ion-label position="floating">
-        Password
-      </ion-label>
-      <ion-input type="password" required formControlName="password"></ion-input>
+      <ion-input type="password" required formControlName="password" placeholder="{{ 'PASSWORD' | translate }}"></ion-input>
     </ion-item>
 
     <ion-row>

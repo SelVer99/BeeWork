@@ -17,8 +17,7 @@ export class AppComponent implements OnInit {
     { title: 'PROFILO_PERSONALE', url: '/profilo-personale', icon: 'person-circle-outline' },
     { title: 'PROGETTI_TASK_PERSONALI', url: '/progetti-task-personali', icon: 'hammer-outline' },
     { title: 'CALENDARIO', url: '/calendario', icon: 'calendar-number-outline'},
-    { title: 'IMPOSTAZIONI', url: '/impostazioni', icon: 'settings-outline'},
-    { title: 'LOGOUT', url: '/login', icon: 'log-out-outline'}
+    { title: 'IMPOSTAZIONI', url: '/impostazioni', icon: 'settings-outline'}
   ];
 
   constructor(private platform: Platform,

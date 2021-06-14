@@ -8,7 +8,7 @@ import {BehaviorSubject, Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 import {Token} from '../model/Token.model';
 import {LoginForm} from '../model/LoginForm.model';
-import {RegistrazioneForm} from "../model/RegistrazioneForm.model";
+import {RegistrazioneForm} from '../model/RegistrazioneForm.model';
 
 @Injectable({
   providedIn: 'root'
@@ -43,7 +43,6 @@ export class UtenteService {
     return this.http.post(URL.REGISTRAZIONE, formData);
   }
 
-  // DA RIVEDERE con il server
   updateProfilo(nuovoUtente: Utente): Observable<Utente> {
     return this.http.post<Utente>(URL.UTENTI, nuovoUtente, {observe: 'response'}).pipe(
       map((resp: HttpResponse<Utente>) => {
