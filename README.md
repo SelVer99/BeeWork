@@ -9,7 +9,7 @@ Ogni team può creare per il proprio progetto una bacheca condivisa tra i vari c
 I task aiutano il team a monitorare lo stato di avanzamento del progetto, che verrà aggiornata ogni volta che uno di questi viene completato.
 
 ## L'applicazione
-<img align="left" alt="BeeWork_logo" src="./imagesREADME/ionic_logo.png" width="200" height="50">
+<img align="left" alt="BeeWork_logo" src="./imagesREADME/ionic_logo.png" width="200" height="70">
 BeeWork è sviluppata lato client tramite l'utilizzo del Ionic, un SDK completo ed open-source per lo sviluppo ibrido di applicazioni mobili basato su AngularJS e Apache Cordova. 
 
 Lato server si è invece sfruttato il framework Spring Boot, che facilita la creazione di applicazioni stand-alone basate su Spring ed immediatamente eseguibili: [BeeWork-api](https://github.com/Flacaro/beework-api)
