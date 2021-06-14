@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="primary" text-center>
+  <ion-toolbar color="primary">
     <ion-buttons slot="start">
       <ion-back-button icon="chevron-back-outline"></ion-back-button>
     </ion-buttons>
@@ -10,10 +10,10 @@
 <ion-content [fullscreen]="true">
 
   <form [formGroup]="newProjectForm" (ngSubmit)="submit()">
-    <ion-list>
+    <ion-list lines="full">
       <ion-item>
         <ion-label position="floating"> {{ 'NOME' | translate }} </ion-label>
-        <ion-textarea autocapitalize inputmode="text" formControlName="name"></ion-textarea>
+        <ion-input inputmode="text" formControlName="name" minlength="1" maxlength="30" ></ion-input>
       </ion-item>
 
       <ion-item>
@@ -23,7 +23,7 @@
 
       <ion-item>
         <ion-label> {{ 'SCADENZA' | translate }} </ion-label>
-        <ion-datetime displayFormat="DD MM YY" placeholder="Seleziona una data" formControlName="expirationDate"></ion-datetime>
+        <ion-datetime displayFormat="DD MM YYYY" placeholder="{{ 'SELEZIONA_DATA' | translate }}" formControlName="expirationDate" min="2021-06" max="2100"></ion-datetime>
       </ion-item>
 
 

@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="primary" text-center>
+  <ion-toolbar color="primary">
     <ion-buttons slot="start">
       <ion-back-button icon="chevron-back-outline"></ion-back-button>
     </ion-buttons>
@@ -12,36 +12,36 @@
   <form [formGroup]="newTaskForm">
     <ion-list>
       <ion-item>
-          <ion-label position="stacked" > {{ 'ETICHETTA' | translate }} </ion-label>
-          <ion-input inputmode="text" formControlName="label"></ion-input>
-      </ion-item>
-
-      <ion-item>
         <ion-label position="floating"> {{ 'NOME' | translate }} </ion-label>
-        <ion-textarea autocapitalize inputmode="text" formControlName="name" ></ion-textarea>
+        <ion-input inputmode="text" formControlName="name" minlength="1" maxlength="30" ></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label position="floating"> {{ 'DESCRIZIONE' | translate }} </ion-label>
-        <ion-textarea inputmode="text" formControlName="description"></ion-textarea>
+        <ion-textarea inputmode="text" formControlName="description" maxlength="40"></ion-textarea>
       </ion-item>
 
       <ion-item>
-        <ion-label>{{ 'SCADENZA' | translate }}</ion-label>
-        <ion-datetime displayFormat="DD MM YY" placeholder="Seleziona una data" formControlName="expirationDate"></ion-datetime>
+        <ion-label position="floating" > {{ 'ETICHETTA' | translate }} </ion-label>
+        <ion-input inputmode="text" formControlName="label" maxlength="15"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label>{{ 'PRIORITA' | translate }}</ion-label>
-        <ion-select placeholder="Select One" formControlName="priority">
-          <ion-select-option value="high">Alta</ion-select-option>
-          <ion-select-option value="medium">Media</ion-select-option>
-          <ion-select-option value="low">Bassa</ion-select-option>
+        <ion-label> {{ 'SCADENZA' | translate }} </ion-label>
+        <ion-datetime displayFormat="DD MM YYYY" placeholder="{{ 'SELEZIONA_DATA' | translate }}" formControlName="expirationDate"  min="2021-06" max="2100"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>  {{ 'PRIORITA' | translate }} </ion-label>
+        <ion-select placeholder="{{ 'SELEZIONA_PRIORITA' | translate }}" formControlName="priority" maxlength="15">
+          <ion-select-option value="high">{{ 'ALTA' | translate }}</ion-select-option>
+          <ion-select-option value="medium">{{ 'MEDIA' | translate }}</ion-select-option>
+          <ion-select-option value="low">{{ 'BASSA' | translate }}</ion-select-option>
         </ion-select>
       </ion-item>
 
       <ion-item>
-        <ion-label>{{ 'MEMBRI' | translate }}</ion-label>
+        <ion-label> {{ 'MEMBRI' | translate }} </ion-label>
         <ion-select multiple="true" formControlName="members">
           <ion-select-option *ngFor="let member of members" [value]="member">{{ member }}</ion-select-option>
         </ion-select>

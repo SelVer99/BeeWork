@@ -9,7 +9,7 @@
   "UPDATE_BUTTON": "Update",
 
   "LOGIN_TITLE": "Login",
-  "LOGIN_ERROR_TITLE": "Login error",
+  "LOGIN_ERROR_TITLE": "Incorrect credentials!",
   "LOGIN_ERROR_SUB_TITLE": "Email and/or password Wrong!",
 
   "SIGNUP_TITLE": "Registration",
@@ -32,7 +32,6 @@
   "DESCRIZIONE": "Description",
   "SCADENZA": "Deadline",
   "CREA": "Generate",
-  "SELEZIONA_DATA": "Select a date",
   "ETICHETTA": "Label",
   "PRIORITA": "Priotity",
   "MEMBRI": "Members",
@@ -57,6 +56,10 @@
   "PROGETTI_PERSONALI": "Personal Projects",
   "PROGETTI_TASK_PERSONALI": "Personal Projects/Tasks",
   "LOGOUT": "Logout",
-  "EMAIL": "Email",
-  "LINGUA": "Language"
+  "LINGUA": "Language",
+  "SELEZIONA_DATA": "Select a date",
+  "SELEZIONA_PRIORITA": "Select a priority",
+  "ALTA": "High",
+  "MEDIA": "Medium",
+  "BASSA": "Low"
 }

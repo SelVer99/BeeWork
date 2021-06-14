@@ -62,11 +62,8 @@ export class LoginPage implements OnInit {
   }
 
   private initTranslate() {
-    this.translateService.get('Credenziali errate!').subscribe((data) => {
-      this.loginSubTitle = data;
-    });
-    // this.translateService.get('LOGIN_ERROR_TITLE').subscribe((data) => {
-    //   this.loginTitle = data;
-    // });
+     this.translateService.get('LOGIN_ERROR_TITLE').subscribe((data) => {
+       this.loginTitle = data;
+     });
   }
 }

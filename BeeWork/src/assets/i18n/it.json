@@ -9,7 +9,7 @@
   "UPDATE_BUTTON": "Modifica",
 
   "LOGIN_TITLE": "Login",
-  "LOGIN_ERROR_TITLE": "Errore Login",
+  "LOGIN_ERROR_TITLE": "Credenziali errate!",
   "LOGIN_ERROR_SUB_TITLE": "Email e/o password errate!",
 
   "SIGNUP_TITLE": "Registrazione",
@@ -32,7 +32,6 @@
   "DESCRIZIONE": "Descrizione",
   "SCADENZA": "Scadenza",
   "CREA": "Crea",
-  "SELEZIONA_DATA": "Seleziona una data",
   "ETICHETTA": "Etichetta",
   "PRIORITA": "Priotità",
   "MEMBRI": "Membri",
@@ -57,6 +56,10 @@
   "PROGETTI_PERSONALI": "Progetti Personali",
   "PROGETTI_TASK_PERSONALI": "Progetti/Task Personali",
   "LOGOUT": "Esci",
-  "EMAIL": "Email",
-  "LINGUA": "Lingua"
+  "LINGUA": "Lingua",
+  "SELEZIONA_DATA": "Seleziona una data",
+  "SELEZIONA_PRIORITA": "Seleziona una priorità",
+  "ALTA": "Alta",
+  "MEDIA": "Media",
+  "BASSA": "Bassa"
 }
