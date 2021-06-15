@@ -1,7 +1,7 @@
 import { Task } from './task.model';
 import {Progetto} from './progetto.model';
 
-export class Utente {
+export interface Utente {
   id: number;
   username: string;
   password: string;

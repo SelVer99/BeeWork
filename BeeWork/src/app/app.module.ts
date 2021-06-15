@@ -33,10 +33,6 @@ export const createTranslateLoader = (http: HttpClient) => new TranslateHttpLoad
         useFactory: (createTranslateLoader),
         deps: [HttpClient]
       }
-    }),
-    IonicStorageModule.forRoot({
-      name: 'beework_db',
-      driverOrder: ['indexeddb', 'sqlite', 'websql']
     })
   ],
   providers: [

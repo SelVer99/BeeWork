@@ -1,7 +1,7 @@
 import { Commento } from './commento.model';
 import {Utente} from './utente.model';
 
-export class Task {
+export interface Task {
   id: number;
   nome: string;
   scadenza: Date;

@@ -1,7 +1,7 @@
 import { Utente } from './utente.model';
 import { Task } from './task.model';
 
-export class Progetto {
+export interface Progetto {
   id: number;
   nome: string;
   percentuale: number;
