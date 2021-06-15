@@ -4,20 +4,21 @@
 
 <img align="right" alt="BeeWork_logo" src="./imagesREADME/logo.png" width="200" height="200">
 
-BeeWork è un'applicazione creata con l’obiettivo di promuovere la collaborazione ad un determinato progetto, aiutando i team a gestire e a dividere in modo semplice e veloce il proprio lavoro. 
+**BeeWork** è un'applicazione creata con l’obiettivo di promuovere la collaborazione ad un determinato progetto, aiutando i team a gestire e a dividere in modo semplice e veloce il proprio lavoro. 
 Ogni team può creare per il proprio progetto una bacheca condivisa tra i vari collaboratori, nella quale si potranno gestire i diversi task da svolgere che daranno una panoramica complessiva degli obiettivi da raggiungere entro un determinato periodo di tempo. Ogni collaboratore in qualsiasi momento, dal proprio smartphone, può visualizzare la lista dei propri progetti e dei compiti a lui assegnati.  
 I task aiutano il team a monitorare lo stato di avanzamento del progetto, che verrà aggiornata ogni volta che uno di questi viene completato.
 
 ## Implementazione
 <img align="left" alt="BeeWork_logo" src="./imagesREADME/ionic_logo.png" width="200" height="70">
-BeeWork è sviluppata lato client tramite l'utilizzo del Ionic, un SDK completo ed open-source per lo sviluppo ibrido di applicazioni mobili basato su AngularJS e Apache Cordova. 
+BeeWork è sviluppata lato client tramite l'utilizzo del framework **Ionic**, un SDK completo ed open-source per lo sviluppo *ibrido* di applicazioni mobili basato su **AngularJS** e **Apache Cordova**. 
 
-Lato server si è invece sfruttato il framework Spring Boot, che facilita la creazione di applicazioni stand-alone basate su Spring ed immediatamente eseguibili: [BeeWork-api](https://github.com/Flacaro/beework-api)
+Lato server si è invece sfruttato il framework **Spring Boot**, che facilita la creazione di applicazioni stand-alone basate su Spring ed immediatamente eseguibili. Si può consultare il progetto qui: [BeeWork-api](https://github.com/Flacaro/beework-api)
 
 ## Requisiti d'installazione
 Per utilizzare BeeWork è necessario aver installato sulla propria macchina:
-- Node.js, versione 14.17.0 o successive;
-- Node Package Manager (npm), versione 7.14.0 o successive.
+- **Node.js**, versione 14.17.0 o successive;
+- **npm** (Node Package Manager), versione 7.14.0 o successive.
+
 Si deve poi procedere con l'installazione dell'ultima versione di Ionic e della Cordova CLI:
 ```
 $ npm install -g @ionic/cli native-run cordova-res
