@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActionSheetController } from '@ionic/angular';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-progetto',
@@ -10,7 +11,7 @@ export class ProgettoPage implements OnInit {
 
 
   constructor(
-    public actionsheetCtrl: ActionSheetController
+    public actionsheetCtrl: ActionSheetController, private router:Router
   ) { }
 
   ngOnInit() {
@@ -31,6 +32,7 @@ export class ProgettoPage implements OnInit {
           text: 'Visualizza Profilo',
           handler: () => {
             console.log('Visualizza Profilo clicked');
+            this.router.navigateByUrl('profilo-membro');
           }
         }
       ]

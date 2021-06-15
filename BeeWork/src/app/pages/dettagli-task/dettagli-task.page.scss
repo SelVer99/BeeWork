@@ -10,9 +10,6 @@
   position: relative;
   left: 30%;}
 
-.prof1{
-  border-color: #7974ff;
-}
-.prof2{
-  border-color: #007069;
+.prof {
+  border-color: var(--ion-color-secondary);
 }

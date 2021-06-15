@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActionSheetController } from '@ionic/angular';
+import {Router} from '@angular/router';
+
 
 @Component({
   selector: 'app-dettagli-task',
@@ -10,7 +12,7 @@ export class DettagliTaskPage implements OnInit {
   myVal = '';
   myVal1 = '';
 
-  constructor(public actionsheetCtrl: ActionSheetController) { }
+  constructor(public actionsheetCtrl: ActionSheetController, private router: Router) { }
 
 
   ngOnInit() {
@@ -38,6 +40,7 @@ export class DettagliTaskPage implements OnInit {
           text: 'Visualizza Profilo',
           handler: () => {
             console.log('Visualizza Profilo clicked');
+            this.router.navigateByUrl('profilo-membro');
           }
         }
       ]
