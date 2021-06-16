@@ -15,9 +15,7 @@ export class ProgettiService {
     return this.http.get<Progetto>(URL.PROGETTI);
   }
 
-  getProgettiUtente() {
-    const progettiUtenteUrl = '${URL.UTENTI}/${utenteId}/progetti';
-    return this.http.get<Progetto>(progettiUtenteUrl);
+  postProgetti(progetto: Progetto): Observable<Progetto> {
+    return this.http.post<Progetto>(URL.PROGETTI, progetto);
   }
-
 }
