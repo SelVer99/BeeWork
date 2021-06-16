@@ -9,6 +9,7 @@ import {map} from 'rxjs/operators';
 import {Token} from '../model/Token.model';
 import {LoginForm} from '../model/LoginForm.model';
 import {RegistrazioneForm} from '../model/RegistrazioneForm.model';
+import {Progetto} from "../model/progetto.model";
 
 @Injectable({
   providedIn: 'root'
@@ -45,5 +46,9 @@ export class UtenteService {
 
   getInfoUtente(): Observable<any> {
     return this.http.get<Utente>(URL.UTENTI);
+  }
+
+  putUtente(utente: Utente): Observable<Utente> {
+    return this.http.put<Utente>(URL.UTENTI, utente);
   }
 }

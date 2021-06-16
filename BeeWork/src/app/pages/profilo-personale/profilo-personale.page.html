@@ -34,7 +34,7 @@
       <p *ngIf="!isVisible">
         {{ this.utente.bio }}
       </p>
-      <ion-textarea *ngIf="isVisible" rows="8" inputmode="text" maxlength="150" [(ngModel)]="utente.bio">
+      <ion-textarea *ngIf="isVisible" rows="8" inputmode="text" maxlength="150" [(ngModel)]="this.utente.bio">
       </ion-textarea>
 
     </ion-card-content>

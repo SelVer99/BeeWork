@@ -27,7 +27,9 @@ export class ProfiloPersonalePage implements OnInit {
   }
 
   toggleVisibility(): void {
+    if (this.isVisible) {
+      this.utenteService.putUtente(this.utente);
+    }
     this.isVisible = !this.isVisible;
   }
-
 }
