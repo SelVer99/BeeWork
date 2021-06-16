@@ -28,6 +28,7 @@ export class ProfiloPersonalePage implements OnInit {
 
   toggleVisibility(): void {
     if (this.isVisible) {
+      console.log(this.utente.bio);
       this.utenteService.putUtente(this.utente);
     }
     this.isVisible = !this.isVisible;
