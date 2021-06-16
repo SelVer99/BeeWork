@@ -15,7 +15,12 @@ export class ProgettiService {
     return this.http.get<Progetto>(URL.PROGETTI);
   }
 
-  postProgetti(progetto: Progetto): Observable<Progetto> {
+  postProgetto(progetto: Progetto): Observable<Progetto> {
     return this.http.post<Progetto>(URL.PROGETTI, progetto);
+  }
+
+  deleteProgetto(progetto: Progetto): Observable<Progetto> {
+    const deleteUrl = `${URL.PROGETTI}/${progetto.id}`;
+    return this.http.delete<Progetto>(deleteUrl);
   }
 }

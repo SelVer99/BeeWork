@@ -9,16 +9,16 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content *ngIf="this.utente">
   <ion-card>
     <div class="card">
       <ion-card-header>
         <div class="profile">BF</div>
-        <ion-card-title>Bello Figo</ion-card-title>
-        <ion-card-subtitle>@theGucciBoy</ion-card-subtitle>
+        <ion-card-title>{{this.utente.nome}} {{this.utente.cognome}}</ion-card-title>
+        <ion-card-subtitle>@{{this.utente.username}}</ion-card-subtitle>
         <div class="mail">
           <ion-icon name="mail-outline"></ion-icon>
-          gucciboy@swag.com</div>
+          {{this.utente.email}}</div>
       </ion-card-header>
     </div>
   </ion-card>
@@ -32,9 +32,9 @@
     </ion-card-header>
     <ion-card-content>
       <p *ngIf="!isVisible">
-        {{ bio }}
+        {{ this.utente.bio }}
       </p>
-      <ion-textarea *ngIf="isVisible" rows="8" inputmode="text" maxlength="150" [(ngModel)]="bio">
+      <ion-textarea *ngIf="isVisible" rows="8" inputmode="text" maxlength="150" [(ngModel)]="utente.bio">
       </ion-textarea>
 
     </ion-card-content>
