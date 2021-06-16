@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Observable} from 'rxjs';
 import {UtenteService} from '../../services/utente.service';
 import {Utente} from '../../model/utente.model';
-import {map} from 'rxjs/operators';
+import {delay, map} from 'rxjs/operators';
 
 @Component({
   selector: 'app-profilo-personale',
@@ -28,8 +28,7 @@ export class ProfiloPersonalePage implements OnInit {
 
   toggleVisibility(): void {
     if (this.isVisible) {
-      console.log(this.utente.bio);
-      this.utenteService.putUtente(this.utente);
+      this.utenteService.putUtente(this.utente).subscribe(utente => this.utente.bio = utente.bio);
     }
     this.isVisible = !this.isVisible;
   }
