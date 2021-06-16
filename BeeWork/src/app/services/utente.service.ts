@@ -43,15 +43,7 @@ export class UtenteService {
     return this.http.post(URL.REGISTRAZIONE, formData);
   }
 
-  updateProfilo(nuovoUtente: Utente): Observable<Utente> {
-    return this.http.post<Utente>(URL.UTENTI, nuovoUtente, {observe: 'response'}).pipe(
-      map((resp: HttpResponse<Utente>) => {
-        // Aggiornamento dell'utente nello storage.
-        // Utente memorizzato nello storage per evitare chiamata REST quando si vuole modificare il profilo
-        // e se l'utente chiude la app e la riapre i dati sono gia' presenti
-        this.storage.set(UTENTE_STORAGE, resp.body);
-        return resp.body;
-      }));
+  getInfoUtente(): Observable<any> {
+    return this.http.get<Utente>(URL.UTENTI);
   }
-
 }

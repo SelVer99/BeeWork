@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {Observable} from 'rxjs';
+import {UtenteService} from '../../services/utente.service';
+import {Utente} from '../../model/utente.model';
+import {map} from 'rxjs/operators';
 
 @Component({
   selector: 'app-profilo-personale',
@@ -6,16 +10,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profilo-personale.page.scss'],
 })
 export class ProfiloPersonalePage implements OnInit {
-
-  bio = 'Paul Yeboah (born 4 August 1992), known as Bello FiGo, is a Ghanaian YouTuber and singer known in Italy for his\n' +
-    '        numerous songs in which he often parodies different topics like racism, sexism and politics that often caused\n' +
-    '        controversy and debate in Italy about his social, political and cultural role because of the way he talks about these topics.';
-
+  private utente: Utente;
   isVisible = false;
 
-  constructor() { }
+  constructor(private utenteService: UtenteService) { }
 
   ngOnInit() {
+    this.utenteService.getInfoUtente().subscribe((data: Utente) => this.utente = {
+      id: (data as any).id,
+      username: (data as any).username,
+      nome: (data as any).nome,
+      cognome: (data as any).cognome,
+      email: (data as any).email,
+      bio: (data as any).bio,
+    });
   }
 
   toggleVisibility(): void {

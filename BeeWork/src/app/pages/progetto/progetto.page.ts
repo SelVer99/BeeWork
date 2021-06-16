@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActionSheetController } from '@ionic/angular';
 import {Router} from '@angular/router';
+import {ProgettiService} from '../../services/progetti.service';
 
 @Component({
   selector: 'app-progetto',
@@ -11,11 +12,13 @@ export class ProgettoPage implements OnInit {
 
 
   constructor(
-    public actionsheetCtrl: ActionSheetController, private router:Router
-  ) { }
+    public actionsheetCtrl: ActionSheetController,
+    private router: Router,
+    private progettiService: ProgettiService) { }
 
   ngOnInit() {
   }
+
   async openMenu() {
     const actionSheet = await this.actionsheetCtrl.create({
       header: 'nome membro',
@@ -39,4 +42,7 @@ export class ProgettoPage implements OnInit {
     });
     await actionSheet.present();
   }
+
+  // Passare il progetto messo in un attributo (dopo aver messo i dati nell'html) al delete del progettiService
+  eliminaProgetto() {}
 }
