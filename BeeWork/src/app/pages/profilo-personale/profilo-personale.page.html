@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="['/home']">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title> {{ 'PROFILO_PERSONALE' | translate }} </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="this.utente">
+  <ion-card>
+    <div class="card">
+      <ion-card-header>
+        <div class="profile">BF</div>
+        <ion-card-title>{{this.utente.nome}} {{this.utente.cognome}}</ion-card-title>
+        <ion-card-subtitle>@{{this.utente.username}}</ion-card-subtitle>
+        <div class="mail">
+          <ion-icon name="mail-outline"></ion-icon>
+          {{this.utente.email}}</div>
+      </ion-card-header>
+    </div>
+  </ion-card>
+
+  <ion-card id="bio">
+    <ion-card-header>
+      <ion-card-title>Bio</ion-card-title>
+      <ion-button color="primary" (click)="toggleVisibility()">
+        <ion-icon name="pencil-outline"></ion-icon>
+      </ion-button>
+    </ion-card-header>
+    <ion-card-content>
+      <p *ngIf="!isVisible">
+        {{ this.utente.bio }}
+      </p>
+      <ion-textarea *ngIf="isVisible" rows="8" inputmode="text" maxlength="150" [(ngModel)]="this.utente.bio">
+      </ion-textarea>
+
+    </ion-card-content>
+  </ion-card>
+
+    <ion-button *ngIf="isVisible" id="button" color="primary" (click)="toggleVisibility()">
+      {{ 'AGGIORNA_BIO' | translate }}
+    </ion-button>
+
+</ion-content>

@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button icon="chevron-back-outline">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/lista-notifiche']">
+        <ion-icon name="notifications-outline"></ion-icon>
+      </ion-button>
+      <ion-button routerLink="/">
+        <ion-icon name="home-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title> {{ 'PROGETTO' | translate }} </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="(progetto$ | async) as progetto">
+  <ion-card>
+    <ion-card-header>
+      <ion-item>
+        <ion-card-title>{{progetto.nome}}</ion-card-title>
+      </ion-item>
+    </ion-card-header>
+
+    <ion-card-content>
+      {{progetto.descrizione}}
+    </ion-card-content>
+  </ion-card>
+
+  <ion-list>
+    <ion-list-header>
+      <ion-label> Completamento: {{progetto.percentuale}}%</ion-label>
+    </ion-list-header>
+    <ion-progress-bar color="success" value="{{progetto.percentuale}}"></ion-progress-bar>
+  </ion-list>
+
+<!--  <button *ngFor="let membro of progetto.membriProgetto" class="btn prof" (click)="openMenu()" >-->
+<!--    {{ membro.nome.charAt(0).toUpperCase() + membro.cognome.charAt(0).toUpperCase() }}-->
+<!--  </button>-->
+
+
+  <ion-list style="margin-top: 1em">
+    <ion-list-header lines="full">
+      <h3>Lista membri</h3>
+    </ion-list-header>
+    <ion-item *ngFor="let membro of progetto.membriProgetto" class="lista-utenti" lines="full">
+      <ion-label (click)="apriProfilo(membro.id)">{{ membro.nome }} {{ membro.cognome}}</ion-label>
+      <ion-button (click)="eliminaUtente(membro.id)">
+        <ion-icon name="trash-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+
+  <ion-button  class="button button3" expand="block" color="primary" strong="true">
+    <ion-label> {{ 'LISTA_TASK' | translate }} </ion-label>
+  </ion-button>
+
+</ion-content>

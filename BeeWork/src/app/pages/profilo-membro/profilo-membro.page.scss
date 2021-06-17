@@ -1,0 +1,27 @@
+
+
+.profile {
+  color: black;
+  //padding: 15px;
+  width: 3em;
+  height: 3em;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  //margin: 4px 2px;
+  border-radius: 50%;
+  border: 2px solid #fecb5e;
+}
+
+.mail {
+  font-size: 16px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  & > ion-icon {
+    margin-right: .5em;
+  }
+}

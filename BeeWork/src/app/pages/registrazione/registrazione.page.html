@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="['/login']">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>{{ 'SIGNUP_TITLE' | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Logo -->
+  <img alt="logo" src="assets/images/logo.png" >
+
+  <form [formGroup]="registrazioneForm">
+    <ion-item lines="full">
+      <ion-icon name="person-circle-outline" slot="start"></ion-icon>
+      <ion-input type="text" required formControlName="username" minlength="4" maxlength="20" placeholder="{{ 'USERNAME' | translate }}"></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-icon name="person-outline" slot="start"></ion-icon>
+      <ion-input type="text" required formControlName="nome" minlength="4" maxlength="20" placeholder="{{ 'NOME' | translate }}"></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-icon name="person-outline" slot="start"></ion-icon>
+      <ion-input type="text" required formControlName="cognome" minlength="4" maxlength="20" placeholder="{{ 'COGNOME' | translate }}"></ion-input>
+    </ion-item>
+
+
+    <ion-item lines="full">
+      <ion-icon name="mail-outline" slot="start"></ion-icon>
+      <ion-input type="text" required formControlName="email" minlength="8" maxlength="30" placeholder="{{ 'EMAIL' | translate }}"></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-icon name="key-outline" slot="start"></ion-icon>
+      <ion-input type="password" required formControlName="password" minlength="5" maxlength="30" placeholder="{{ 'PASSWORD' | translate }}"></ion-input>
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+        <ion-button [routerLink]="['/registrazione']" color="primary" expand="block" (click)="onRegister()">
+          {{ 'SIGNUP_BUTTON' | translate }}
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+
+</ion-content>

@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button icon="chevron-back-outline"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/lista-notifiche']">
+        <ion-icon name="notifications-outline"></ion-icon>
+      </ion-button>
+      <ion-button [routerLink]="['/home']">
+        <ion-icon name="home-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title> {{ 'TASK' | translate }} </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-item>
+        <ion-card-title>nome task</ion-card-title>
+        <ion-button class="trash" color="primary" (click)="eliminaProgetto()">
+          <ion-icon name="trash-outline"></ion-icon>
+        </ion-button>
+      </ion-item>
+    </ion-card-header>
+
+    <ion-card-content>
+      descrizione task
+    </ion-card-content>
+  </ion-card>
+
+  <ion-chip class="priorita" color="danger">
+    <ion-label color="danger">urgente</ion-label>
+  </ion-chip>
+
+  <ion-chip class="etichetta" color="secondary">
+    <ion-label color="secondary">per prof. Rossi</ion-label>
+  </ion-chip>
+
+  <ion-chip class="scadenza" color="dark">
+    <ion-icon name="calendar-outline"></ion-icon>
+    <ion-label>14-06-2021</ion-label>
+  </ion-chip>
+
+
+  <ion-item class="membri" color="light">
+    <button class="btn prof" (click)="openMenu()">SV</button>
+    <button class="btn prof" (click)="openMenu()">FC</button>
+  </ion-item>
+
+
+</ion-content>

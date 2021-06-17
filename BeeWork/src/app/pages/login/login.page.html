@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>{{ 'LOGIN_TITLE' | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="auth-content">
+
+    <!-- Logo -->
+    <img alt="logo" src="assets/images/logo.png" >
+
+    <form [formGroup]="loginFormModel">
+      <ion-item lines="full">
+        <ion-icon name="mail-outline" slot="start"></ion-icon>
+        <ion-input color="secondary" type="email" formControlName="email" minlength="8" maxlength="30" placeholder="{{'EMAIL' | translate}}"></ion-input>
+      </ion-item>
+      <p class="text08">
+        <ion-text color="danger" *ngIf="loginFormModel.errors">{{ 'EMAIL_REQUIRED' | translate }}</ion-text>
+      </p>
+
+      <ion-item lines="full">
+        <ion-icon name="key-outline" slot="start"></ion-icon>
+        <ion-input color="secondary" type="password" formControlName="password" minlength="5" maxlength="30" placeholder="{{ 'PASSWORD' | translate }}"></ion-input>
+      </ion-item>
+
+      <ion-row>
+        <ion-col>
+          <ion-button expand="block" color="primary" (click)="onLogin()" [disabled]="!loginFormModel.valid">
+            {{ 'LOGIN_BUTTON' | translate }}
+          </ion-button>
+
+          <ion-button [routerLink]="['/registrazione']" color="primary" expand="block">
+            {{ 'SIGNUP_BUTTON' | translate }}
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+
+  </div>
+</ion-content>
+

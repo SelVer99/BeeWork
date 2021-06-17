@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button icon="chevron-back-outline"></ion-back-button>
+    </ion-buttons>
+    <ion-title> {{ 'NUOVO_PROGETTO' | translate }} </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <form [formGroup]="newProjectForm" (ngSubmit)="submit()">
+    <ion-list lines="full">
+      <ion-item>
+        <ion-label position="floating"> {{ 'NOME' | translate }} </ion-label>
+        <ion-input inputmode="text" formControlName="name" minlength="1" maxlength="30" ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating"> {{ 'DESCRIZIONE' | translate }} </ion-label>
+        <ion-textarea inputmode="text" formControlName="description"></ion-textarea>
+      </ion-item>
+
+
+    <ion-button id= "button" [disabled]="!newProjectForm.valid" color="primary" expand="block" type="submit">
+      <ion-label> {{ 'CREA' | translate }} </ion-label>
+    </ion-button>
+
+    </ion-list>
+  </form>
+
+</ion-content>

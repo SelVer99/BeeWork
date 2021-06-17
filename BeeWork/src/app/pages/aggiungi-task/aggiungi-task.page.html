@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button icon="chevron-back-outline"></ion-back-button>
+    </ion-buttons>
+    <ion-title> {{ 'NUOVO_TASK' | translate }} </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <form [formGroup]="newTaskForm" (ngSubmit)="submit()">
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating"> {{ 'NOME' | translate }} </ion-label>
+        <ion-input inputmode="text" formControlName="name" minlength="1" maxlength="30" ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating"> {{ 'DESCRIZIONE' | translate }} </ion-label>
+        <ion-textarea inputmode="text" formControlName="description" maxlength="40"></ion-textarea>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating" > {{ 'ETICHETTA' | translate }} </ion-label>
+        <ion-input inputmode="text" formControlName="label" maxlength="15"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label> {{ 'SCADENZA' | translate }} </ion-label>
+        <ion-datetime displayFormat="DD MM YYYY" placeholder="{{ 'SELEZIONA_DATA' | translate }}" formControlName="expirationDate"  min="2021-06" max="2100"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>  {{ 'PRIORITA' | translate }} </ion-label>
+        <ion-select placeholder="{{ 'SELEZIONA_PRIORITA' | translate }}" formControlName="priority" maxlength="15">
+          <ion-select-option value="high">{{ 'ALTA' | translate }}</ion-select-option>
+          <ion-select-option value="medium">{{ 'MEDIA' | translate }}</ion-select-option>
+          <ion-select-option value="low">{{ 'BASSA' | translate }}</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label> {{ 'MEMBRI' | translate }} </ion-label>
+        <ion-select multiple="true" formControlName="members">
+          <ion-select-option *ngFor="let member of members" [value]="member">{{ member }}</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+    <ion-button id= "button" [routerLink]="['/dettagli-task']" [disabled]="!newTaskForm.valid" color="primary" expand="block" type="submit">
+      <ion-label> {{ 'CREA' | translate }} </ion-label>
+    </ion-button>
+
+    </ion-list>
+  </form>
+
+</ion-content>

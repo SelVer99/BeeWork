@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="['/home']">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title> {{ 'LISTA_NOTIFICHE' | translate }} </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card *ngFor="let notifica of (notifiche$ | async)">
+
+    <ion-card-header color="primary">
+      <ion-card-title>{{ notifica['nome'] }}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-icon name="albums-outline"></ion-icon>
+      {{ notifica['descrizione'] }}
+    </ion-card-content>
+
+  </ion-card>
+</ion-content>
+

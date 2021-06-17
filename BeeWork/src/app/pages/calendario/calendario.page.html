@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="['/home']">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title> {{ 'CALENDARIO' | translate }} </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-content>
+    <ion-content>
+      <ion-content>
+        <div class="ion-padding">
+          <ion-calendar>
+          </ion-calendar>
+        </div>
+      </ion-content>
+    </ion-content>
+  </ion-content>
+</ion-content>
