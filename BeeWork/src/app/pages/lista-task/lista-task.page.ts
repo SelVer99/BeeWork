@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Observable} from 'rxjs';
+import {TaskService} from '../../services/task.service';
 
 @Component({
   selector: 'app-lista-task',
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lista-task.page.scss'],
 })
 export class ListaTaskPage implements OnInit {
+  task$: Observable<any>;
 
-  constructor() { }
+  constructor(private taskService: TaskService) { }
 
   ngOnInit() {
+    this.task$ = this.taskService.getTask();
   }
 
 }

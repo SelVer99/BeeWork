@@ -12,8 +12,7 @@ import {Progetto} from '../../model/progetto.model';
 export class AggiungiProgettoPage implements OnInit {
   newProjectForm = this.formBuilder.group({
     name: ['', Validators.required],
-    description: [''],
-    expirationDate: ['', Validators.required]
+    description: ['']
   });
 
   constructor(private formBuilder: FormBuilder,
@@ -25,8 +24,7 @@ export class AggiungiProgettoPage implements OnInit {
   submit() {
     const progetto: Progetto = {
       nome: this.newProjectForm.value.name,
-      descrizione: this.newProjectForm.value.description,
-      scadenza: this.newProjectForm.value.expirationDate
+      descrizione: this.newProjectForm.value.description
     };
     this.progettoService.postProgetto(progetto).subscribe(console.log);
   }

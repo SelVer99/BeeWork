@@ -9,7 +9,7 @@
 
 <ion-content [fullscreen]="true">
 
-  <form [formGroup]="newTaskForm">
+  <form [formGroup]="newTaskForm" (ngSubmit)="submit()">
     <ion-list>
       <ion-item>
         <ion-label position="floating"> {{ 'NOME' | translate }} </ion-label>
@@ -47,7 +47,7 @@
         </ion-select>
       </ion-item>
 
-    <ion-button id= "button" [routerLink]="['/lista-task']" [disabled]="!newTaskForm.valid" color="primary" expand="block" type="submit">
+    <ion-button id= "button" [routerLink]="['/dettagli-task']" [disabled]="!newTaskForm.valid" color="primary" expand="block" type="submit">
       <ion-label> {{ 'CREA' | translate }} </ion-label>
     </ion-button>
 

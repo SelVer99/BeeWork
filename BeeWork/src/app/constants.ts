@@ -5,7 +5,7 @@ export const URL = {
   REGISTRAZIONE: URL_BASE + '/auth/registrazione',
   PROGETTI: URL_BASE + '/progetti',
   UTENTI: URL_BASE + '/utenti',
-  TASK: URL_BASE + '/task'
+  TASK: URL_BASE + '/tasks'
 };
 
 export const X_AUTH = 'X-Auth';

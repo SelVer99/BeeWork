@@ -5,7 +5,6 @@ export interface Progetto {
   id?: number;
   nome: string;
   percentuale?: number;
-  scadenza?: Date;
   descrizione: string;
   membri?: Array<Utente>;
   listaTask?: Array<Task>;

@@ -23,4 +23,9 @@ export class ProgettiService {
     const deleteUrl = `${URL.PROGETTI}/${progetto.id}`;
     return this.http.delete<Progetto>(deleteUrl);
   }
+
+  getProgetto(id): Observable<Progetto> {
+    const getUrl = `${URL.PROGETTI}/${id}`;
+    return this.http.get<Progetto>(getUrl);
+  }
 }

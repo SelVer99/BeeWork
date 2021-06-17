@@ -21,11 +21,6 @@
         <ion-textarea inputmode="text" formControlName="description"></ion-textarea>
       </ion-item>
 
-      <ion-item>
-        <ion-label> {{ 'SCADENZA' | translate }} </ion-label>
-        <ion-datetime displayFormat="DD MM YYYY" placeholder="{{ 'SELEZIONA_DATA' | translate }}" formControlName="expirationDate" min="2021-06" max="2100"></ion-datetime>
-      </ion-item>
-
 
     <ion-button id= "button" [routerLink]="['/progetto']" [disabled]="!newProjectForm.valid" color="primary" expand="block" type="submit">
       <ion-label> {{ 'CREA' | translate }} </ion-label>

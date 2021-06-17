@@ -15,67 +15,43 @@
   </ion-toolbar>
 </ion-header>
 
+
 <ion-content>
+
   <ion-card>
     <ion-card-header>
       <ion-item>
-        <ion-item>Diffusione volpe rossa   </ion-item>
-        <ion-button id="button" color="primary">
+        <ion-card-title>nome task</ion-card-title>
+        <ion-button class="trash" color="primary" (click)="eliminaProgetto()">
           <ion-icon name="trash-outline"></ion-icon>
         </ion-button>
       </ion-item>
     </ion-card-header>
 
     <ion-card-content>
-      Ricercare la diffusione della volpe rossa in portogallo. In particolare, indicare le zone della penisola in cui la volpe sta scomparendo.
-      <ion-chip class="priorita" color="danger">
-        <ion-label color="danger">urgente</ion-label>
-      </ion-chip>
-      <ion-chip class="etichetta" color="secondary">
-        <ion-label color="secondary">per prof. Rossi</ion-label>
-      </ion-chip>
-
+      descrizione task
     </ion-card-content>
-
   </ion-card>
+
+  <ion-card>
+    <ion-chip class="priorita" color="danger">
+      <ion-label color="danger">priorità alta</ion-label>
+    </ion-chip>
+
+    <ion-chip class="etichetta" color="secondary">
+      <ion-label color="secondary">per prof. Rossi</ion-label>
+    </ion-chip>
 
   <ion-chip class="scadenza" color="dark">
     <ion-icon name="calendar-outline"></ion-icon>
     <ion-label>14-06-2021</ion-label>
   </ion-chip>
+  </ion-card>
 
   <ion-item class="membri" color="light">
     <button class="btn prof" (click)="openMenu()">SV</button>
     <button class="btn prof" (click)="openMenu()">FC</button>
   </ion-item>
 
-  <ion-item class="commenti" >
-    <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
-    <ion-input inputmode="text" color="secondary" placeholder="scrivi commento qui" maxlength="100" [(ngModel)]="myVal"></ion-input>
-    <ion-label color="dark">{{myVal1}}</ion-label>
-  </ion-item>
-  <ion-button class="button123" color="primary" [disabled]="myVal==''" (click)="submit()">{{ 'COMMENTA' | translate }}</ion-button>
-
-  <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle>@theGucciBoy - 11-06-2021</ion-card-subtitle>
-      <ion-card-title>Bello Figo</ion-card-title>
-    </ion-card-header>
-
-    <ion-card-content>
-      ho quasi terminato, datemi altri due giorni.
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle>@Trucebaldazzi - 10-06-2021</ion-card-subtitle>
-      <ion-card-title>Matteo Baldazzi</ion-card-title>
-    </ion-card-header>
-
-    <ion-card-content>
-      @theGucciBoy come procede?
-    </ion-card-content>
-  </ion-card>
 
 </ion-content>
