@@ -5,6 +5,7 @@ import {NOTIFICHE} from '../constants';
 import {Observable} from 'rxjs';
 import {fromPromise} from 'rxjs/internal-compatibility';
 import {HttpClient} from "@angular/common/http";
+import { URL } from '../constants';
 
 export class Notifiche {
   etichetta: string;
@@ -21,19 +22,19 @@ export class NotificheService {
 
   constructor(private storage: Storage, private http: HttpClient) {}
 
-  getNotificheAttuale(): Observable<string> {
+  getSceltaNotificheAttuale(): Observable<any> {
     return fromPromise(this.storage.get(NOTIFICHE));
-  }
-
-  getNotifichePreferite(): string {
-    return this.notifyMe.valore;
-  }
-
-  getNotifiche(): Observable<any> {
-    return this.http.get('http://localhost:8080/utenti/3/notifiche');
   }
 
   updateNotifiche(nuovaScelta: string) {
     this.storage.set(NOTIFICHE, nuovaScelta);
+  }
+
+  getSceltaNotifichePreferita(): string {
+    return this.notifyMe.valore;
+  }
+
+  getNotifiche(): Observable<any> {
+    return this.http.get(URL.NOTIFICHE);
   }
 }

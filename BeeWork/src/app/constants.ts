@@ -3,6 +3,7 @@ export const URL_BASE = 'http://localhost:8080';
 export const URL = {
   LOGIN: URL_BASE + '/auth/login',
   REGISTRAZIONE: URL_BASE + '/auth/registrazione',
+  NOTIFICHE: URL_BASE + '/notifiche',
   PROGETTI: URL_BASE + '/progetti',
   UTENTI: URL_BASE + '/utenti',
   TASK: URL_BASE + '/tasks'

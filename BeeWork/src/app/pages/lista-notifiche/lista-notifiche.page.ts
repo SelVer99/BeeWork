@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Observable} from "rxjs";
-import {NotificheService} from "../../services/notifiche.service";
+import { Observable } from 'rxjs';
+import { NotificheService } from '../../services/notifiche.service';
 
 @Component({
   selector: 'app-lista-notifiche',
@@ -14,7 +14,10 @@ export class ListaNotifichePage implements OnInit {
   constructor(private notificheService: NotificheService) { }
 
   ngOnInit() {
-    this.notifiche$ = this.notificheService.getNotifiche();
+   this.notificheService.getSceltaNotificheAttuale().subscribe((scelta: string) => {
+     if (scelta === 'on') {
+       this.notifiche$ = this.notificheService.getNotifiche();
+     }
+   });
   }
-
 }
