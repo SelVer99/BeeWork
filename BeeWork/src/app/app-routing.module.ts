@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import {AuthGuard} from './guard/auth.guard';
-import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
+import { AuthGuard } from './guard/auth.guard';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {
@@ -68,10 +68,6 @@ const routes: Routes = [
   {
     path: '**',
     component: PageNotFoundComponent
-  },
-  {
-    path: 'progetti',
-    loadChildren: () => import('./pages/progetti/progetti.module').then( m => m.ProgettiPageModule)
   }
 ];
 
