@@ -3,13 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { ProgettiPage } from './progetti.page';
 import {DettaglioProgettoComponent} from './components/dettaglio-progetto/dettaglio-progetto.component';
-import {ShellComponent} from './components/shell/shell.component';
+import { AggiungiMembriComponent } from './components/aggiungi-membri/aggiungi-membri.component';
+import { ListaTasksComponent } from './components/lista-tasks/lista-tasks.component';
 
 const routes: Routes = [
   // /progetti
   {
     path: '',
-    component: ShellComponent,
     children: [
       {
         path: '',
@@ -17,14 +17,22 @@ const routes: Routes = [
       },
       {
         path: ':id',
-        component: DettaglioProgettoComponent,
         children: [
+          {
+            path: '',
+            component: DettaglioProgettoComponent,
+          },
           {
             path: 'tasks',
             loadChildren: () => import('../lista-task/lista-task.module').then(m => m.ListaTaskPageModule)
+          },
+          {
+            path: 'aggiungi-utenti',
+            component: AggiungiMembriComponent
           }
         ]
-      }
+      },
+      
     ]
   },
 

@@ -1,16 +1,17 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {ActionSheetController} from '@ionic/angular';
+import {ActionSheetController, ViewWillEnter} from '@ionic/angular';
 import {ActivatedRoute, Router} from '@angular/router';
 import {ProgettiService} from '../../../../services/progetti.service';
 import {Observable, Subscription} from 'rxjs';
 import {Progetto} from '../../../../model/progetto.model';
+import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-dettaglio-progetto',
   templateUrl: './dettaglio-progetto.component.html',
   styleUrls: ['./dettaglio-progetto.component.scss'],
 })
-export class DettaglioProgettoComponent implements OnInit {
+export class DettaglioProgettoComponent implements ViewWillEnter {
 
   progetto$: Observable<Progetto>;
   progettoId: number;
@@ -21,13 +22,16 @@ export class DettaglioProgettoComponent implements OnInit {
     private progettiService: ProgettiService,
     private activatedRoute: ActivatedRoute) { }
 
-  ngOnInit() {
+
+  ionViewWillEnter(): void {
     this.progettoId = this.activatedRoute.snapshot.params.id;
     this.progetto$ = this.progettiService.getProgetto(this.progettoId);
   }
 
   eliminaUtente(id: number) {
-    // elimina utente
+    this.progetto$ = this.progettiService.eliminaMembro(this.progettoId, id).pipe(
+      switchMap(() => this.progettiService.getProgetto(this.progettoId))
+    )
   }
 
   apriProfilo(id: number) {

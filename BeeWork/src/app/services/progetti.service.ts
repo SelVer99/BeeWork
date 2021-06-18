@@ -28,4 +28,14 @@ export class ProgettiService {
     const getUrl = `${URL.PROGETTI}/${id}`;
     return this.http.get<Progetto>(getUrl);
   }
+
+
+  eliminaMembro(progettoId: number, id: number) {
+    return this.http.delete(`${URL.PROGETTI}/${progettoId}/utenti/${id}`);
+  }
+
+  aggiungiMembroAlProgetto(progettoId: number, utenteId: number) {
+    return this.http.post(`${URL.PROGETTI}/${progettoId}/utenti/`, {entityId: utenteId})
+  }
+
 }

@@ -43,7 +43,12 @@
 
   <ion-list style="margin-top: 1em">
     <ion-list-header lines="full">
-      <h3>Lista membri</h3>
+      <div class="header-membri">
+        <h3>Lista membri</h3>
+        <ion-button routerLink="aggiungi-utenti">
+          <ion-icon name="add-circle-outline"></ion-icon>
+        </ion-button>
+      </div>
     </ion-list-header>
     <ion-item *ngFor="let membro of progetto.membriProgetto" class="lista-utenti" lines="full">
       <ion-label (click)="apriProfilo(membro.id)">{{ membro.nome }} {{ membro.cognome}}</ion-label>
@@ -54,7 +59,7 @@
   </ion-list>
 
 
-  <ion-button  class="button button3" expand="block" color="primary" strong="true">
+  <ion-button routerLink="tasks" class="button button3" expand="block" color="primary" strong="true">
     <ion-label> {{ 'LISTA_TASK' | translate }} </ion-label>
   </ion-button>
 

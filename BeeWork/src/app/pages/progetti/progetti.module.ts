@@ -10,7 +10,8 @@ import { ProgettiPage } from './progetti.page';
 import {TranslateModule} from '@ngx-translate/core';
 import {DettaglioProgettoComponent} from './components/dettaglio-progetto/dettaglio-progetto.component';
 import {ListaTasksComponent} from './components/lista-tasks/lista-tasks.component';
-import {ShellComponent} from './components/shell/shell.component';
+import { AggiungiMembriComponent } from './components/aggiungi-membri/aggiungi-membri.component';
+import { UserInitialsAvatarComponent } from 'src/app/shared/components/user-initials-avatar/user-initials-avatar.component';
 
 @NgModule({
   imports: [
@@ -20,6 +21,6 @@ import {ShellComponent} from './components/shell/shell.component';
     TranslateModule.forChild(),
     ProgettiPageRoutingModule
   ],
-  declarations: [ProgettiPage, DettaglioProgettoComponent, ListaTasksComponent, ShellComponent]
+  declarations: [ProgettiPage, DettaglioProgettoComponent, ListaTasksComponent, AggiungiMembriComponent, UserInitialsAvatarComponent]
 })
 export class ProgettiPageModule {}

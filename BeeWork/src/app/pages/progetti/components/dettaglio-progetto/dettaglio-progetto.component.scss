@@ -58,5 +58,15 @@
   display: flex;
 }
 
+.header-membri {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  & > ion-button {
+    margin-right: .23em;
+    margin-top: 1em;
+    font-size: 1.2em;
+  }
+}
 
 

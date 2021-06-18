@@ -16,12 +16,13 @@
 </ion-header>
 
 
-<ion-content>
+<ion-content *ngIf="(task$ | async) as task">
+
 
   <ion-card>
     <ion-card-header>
       <ion-item>
-        <ion-card-title>nome task</ion-card-title>
+        <ion-card-title>{{ task.nome }}</ion-card-title>
         <ion-button class="trash" color="primary" (click)="eliminaProgetto()">
           <ion-icon name="trash-outline"></ion-icon>
         </ion-button>
@@ -29,28 +30,28 @@
     </ion-card-header>
 
     <ion-card-content>
-      descrizione task
+      {{ task.descrizione }}
     </ion-card-content>
   </ion-card>
 
   <ion-chip class="priorita" color="danger">
-    <ion-label color="danger">urgente</ion-label>
+    <ion-label color="danger">{{ task.priorita }}</ion-label>
   </ion-chip>
 
-  <ion-chip class="etichetta" color="secondary">
-    <ion-label color="secondary">per prof. Rossi</ion-label>
+  <ion-chip class="etichetta" color="secondary" *ngIf="task.etichetta">
+    <ion-label color="secondary"> {{ task.etichetta }} </ion-label>
   </ion-chip>
 
-  <ion-chip class="scadenza" color="dark">
+  <!-- <ion-chip class="scadenza" color="dark">
     <ion-icon name="calendar-outline"></ion-icon>
     <ion-label>14-06-2021</ion-label>
-  </ion-chip>
+  </ion-chip> -->
 
 
-  <ion-item class="membri" color="light">
+  <!-- <ion-item class="membri" color="light">
     <button class="btn prof" (click)="openMenu()">SV</button>
     <button class="btn prof" (click)="openMenu()">FC</button>
-  </ion-item>
+  </ion-item> -->
 
 
 </ion-content>

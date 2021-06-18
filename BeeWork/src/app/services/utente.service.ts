@@ -66,4 +66,9 @@ export class UtenteService {
   putUtente(utente: Utente): Observable<Utente> {
     return this.http.put<Utente>(URL.UTENTI, utente);
   }
+
+
+  getAllUsers(): Observable<Utente[]> {
+    return this.http.get<Utente[]>(`${URL.UTENTI}/tutti`);
+  }
 }

@@ -11,7 +11,7 @@
   <ion-card>
     <div class="card">
       <ion-card-header>
-        <div class="profile">{{ utente.nome.charAt(0) + utente.cognome.charAt(0) }}</div>
+        <div class="profile">{{ utente.nome.charAt(0).toUpperCase() + utente.cognome.charAt(0).toUpperCase() }}</div>
         <h1>{{ utente.nome }} {{ utente.cognome }} </h1>
         <h4>@{{ utente.username}}</h4>
 <!--        <ion-card-subtitle>@{{ utente.username}}</ion-card-subtitle>-->

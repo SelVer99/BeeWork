@@ -11,11 +11,20 @@ export class TaskService {
 
   constructor(private http: HttpClient) { }
 
-  getTask(): Observable<any> {
-    return this.http.get<Task>(URL.TASK);
+  getProjectTask(projectId: number): Observable<Task[]> {
+    return this.http.get<Task[]>(`${URL.PROGETTI}/${projectId}/tasks`);
   }
 
-  postTask(task: Task): Observable<Task> {
-    return this.http.post<Task>(URL.TASK, task);
+  createTask(projectId: number, task: Task): Observable<Task> {
+    return this.http.post<Task>(`${URL.PROGETTI}/${projectId}/tasks`, task);
   }
+
+  getTaskById(projectId: number, taskId: number): Observable<Task> {
+    return this.http.get<Task>(`${URL.PROGETTI}/${projectId}/tasks/${taskId}`);
+  }
+
+  deleteTaskById(projectId: number, taskId: number): Observable<any> {
+    return this.http.delete(`${URL.PROGETTI}/${projectId}/tasks/${taskId}`)
+  }
+
 }
