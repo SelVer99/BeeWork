@@ -11,8 +11,8 @@ import { NotificheService } from '../../services/notifiche.service';
   styleUrls: ['./impostazioni.page.scss'],
 })
 export class ImpostazioniPage implements OnInit {
-  private dark = false;
-  private notify = true;
+  private dark: boolean;
+  private notify: boolean;
 
   constructor(private temaService: TemaService,
               private translate: TranslateService,
@@ -32,6 +32,7 @@ export class ImpostazioniPage implements OnInit {
     } else {
       document.body.setAttribute('color-theme','light');
       this.temaService.updateTema('light');
+      this.dark = false;
     }
   }
 

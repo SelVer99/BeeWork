@@ -15,7 +15,7 @@ export const AUTH_TOKEN = 'auth-token';
 
 export const UTENTE_STORAGE = 'utente';
 
-export const NOTIFICHE = 'notifiche';
+export const NOTIFICHE = 'on';
 
 export const TEMA = 'light';
 
