@@ -16,16 +16,19 @@
 </ion-header>
 
 
-<ion-content *ngIf="(task$ | async) as task">
-
-
+<ion-content *ngIf="task">
   <ion-card>
     <ion-card-header>
       <ion-item>
-        <ion-card-title>{{ task.nome }}</ion-card-title>
-        <ion-button class="trash" color="primary" (click)="eliminaProgetto()">
-          <ion-icon name="trash-outline"></ion-icon>
-        </ion-button>
+        <div class="card-content">
+          <h2>{{ task.nome }}</h2>
+          
+          <!-- si ma no se metti ngIf su una espressione..se e' valutata false il componente sparisce -->
+          <ion-button [color]="isCompleted  ? 'success' : null" class="trash" color="primary" (click)="completeTask(task.id)">
+            <ion-icon  name="checkmark-circle-outline"></ion-icon>
+          </ion-button>
+        </div>
+
       </ion-item>
     </ion-card-header>
 
@@ -34,24 +37,22 @@
     </ion-card-content>
   </ion-card>
 
+
   <ion-chip class="priorita" color="danger">
     <ion-label color="danger">{{ task.priorita }}</ion-label>
   </ion-chip>
+ 
 
   <ion-chip class="etichetta" color="secondary" *ngIf="task.etichetta">
     <ion-label color="secondary"> {{ task.etichetta }} </ion-label>
   </ion-chip>
+  <div>
+    <ion-chip class="scadenza" color="dark">
+      <ion-icon name="calendar-outline"></ion-icon>
+      <ion-label>{{ task.scadenza | date}}</ion-label>
+    </ion-chip>
+  </div>
 
-  <!-- <ion-chip class="scadenza" color="dark">
-    <ion-icon name="calendar-outline"></ion-icon>
-    <ion-label>14-06-2021</ion-label>
-  </ion-chip> -->
-
-
-  <!-- <ion-item class="membri" color="light">
-    <button class="btn prof" (click)="openMenu()">SV</button>
-    <button class="btn prof" (click)="openMenu()">FC</button>
-  </ion-item> -->
 
 
 </ion-content>

@@ -1,0 +1,19 @@
+div {
+    display: flex;
+    height: 80%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: white;
+}
+
+.link {
+    background: none;
+    text-decoration: underline;
+    color: var(--ion-color-primary);
+    font-size: 1.2em;
+}

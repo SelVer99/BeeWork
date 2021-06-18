@@ -23,11 +23,11 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-list>
+  <ion-list *ngIf="progetti">
 
-    <ion-item *ngFor="let progetto of (progetti$ | async)"  button routerLink="/progetti/{{progetto.id}}">
+    <ion-item *ngFor="let progetto of progetti">
       <ion-label class="progetto">
-        <h3>{{ progetto['nome'] }}</h3>
+        <h3 routerLink="/progetti/{{progetto.id}}">{{ progetto['nome'] }}</h3>
         <ion-button class="button5" color="primary" (click)="eliminaProgetto(progetto.id)">
           <ion-icon name="trash-outline"></ion-icon>
         </ion-button>

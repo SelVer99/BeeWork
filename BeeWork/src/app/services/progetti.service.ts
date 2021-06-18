@@ -11,8 +11,8 @@ import { URL } from '../constants';
 export class ProgettiService {
   constructor(private http: HttpClient) { }
 
-  getProgetti(): Observable<Progetto> {
-    return this.http.get<Progetto>(URL.PROGETTI);
+  getProgetti(): Observable<Progetto[]> {
+    return this.http.get<Progetto[]>(URL.PROGETTI);
   }
 
   postProgetto(progetto: Progetto): Observable<Progetto> {
