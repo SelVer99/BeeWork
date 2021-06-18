@@ -16,7 +16,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content *ngIf="(progetto$ | async) as progetto">
+<ion-content *ngIf="progetto">
   <ion-card>
     <ion-card-header>
       <ion-item>
@@ -31,14 +31,10 @@
 
   <ion-list>
     <ion-list-header>
-      <ion-label> Completamento: {{progetto.percentuale}}%</ion-label>
+      <ion-label>  Task completati: {{progetto['tasks'] | completedProjects}}</ion-label>
     </ion-list-header>
-    <ion-progress-bar color="success" value="{{progetto.percentuale}}"></ion-progress-bar>
   </ion-list>
 
-<!--  <button *ngFor="let membro of progetto.membriProgetto" class="btn prof" (click)="openMenu()" >-->
-<!--    {{ membro.nome.charAt(0).toUpperCase() + membro.cognome.charAt(0).toUpperCase() }}-->
-<!--  </button>-->
 
 
   <ion-list style="margin-top: 1em">

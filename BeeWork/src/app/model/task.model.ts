@@ -8,5 +8,4 @@ export interface Task {
   completato?: boolean;
   descrizione: string;
   etichetta?: string;
-  listaMembri?: Array<Utente>;
 }

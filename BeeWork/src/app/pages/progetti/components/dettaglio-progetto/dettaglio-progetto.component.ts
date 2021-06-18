@@ -13,9 +13,9 @@ import { switchMap } from 'rxjs/operators';
 })
 export class DettaglioProgettoComponent implements ViewWillEnter {
 
-  progetto$: Observable<Progetto>;
+  progetto: Progetto;
   progettoId: number;
-  // Dependency injection
+  
   constructor(
     public actionsheetCtrl: ActionSheetController,
     private router: Router,
@@ -25,13 +25,13 @@ export class DettaglioProgettoComponent implements ViewWillEnter {
 
   ionViewWillEnter(): void {
     this.progettoId = this.activatedRoute.snapshot.params.id;
-    this.progetto$ = this.progettiService.getProgetto(this.progettoId);
+    this.progettiService.getProgetto(this.progettoId).subscribe(progetto => this.progetto = progetto);
   }
 
   eliminaUtente(id: number) {
-    this.progetto$ = this.progettiService.eliminaMembro(this.progettoId, id).pipe(
+    this.progettiService.eliminaMembro(this.progettoId, id).pipe(
       switchMap(() => this.progettiService.getProgetto(this.progettoId))
-    )
+    ).subscribe(progetto => this.progetto = progetto);
   }
 
   apriProfilo(id: number) {

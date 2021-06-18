@@ -22,30 +22,22 @@
       </ion-item>
 
       <ion-item>
+        <ion-label> {{ 'SCADENZA' | translate }} </ion-label>
+        <ion-datetime min="2021-06-01" max="2100-06-01" displayFormat="DD MM YYYY" placeholder="{{ 'SELEZIONA_DATA' | translate }}" formControlName="scadenza"></ion-datetime>
+      </ion-item>
+ 
+      <ion-item>
         <ion-label position="floating" > {{ 'ETICHETTA' | translate }} </ion-label>
         <ion-input inputmode="text" formControlName="etichetta"></ion-input>
       </ion-item>
-
-      <!-- <ion-item>
-        <ion-label> {{ 'SCADENZA' | translate }} </ion-label>
-        <ion-datetime displayFormat="DD MM YYYY" placeholder="{{ 'SELEZIONA_DATA' | translate }}" formControlName="scadenza"  min="2021-06" max="2100"></ion-datetime>
-      </ion-item> -->
-
       <ion-item>
         <ion-label>  {{ 'PRIORITA' | translate }} </ion-label>
         <ion-select placeholder="{{ 'SELEZIONA_PRIORITA' | translate }}" formControlName="priorita" maxlength="15">
-          <ion-select-option value="high">{{ 'ALTA' | translate }}</ion-select-option>
-          <ion-select-option value="medium">{{ 'MEDIA' | translate }}</ion-select-option>
-          <ion-select-option value="low">{{ 'BASSA' | translate }}</ion-select-option>
+          <ion-select-option value="{{ 'ALTA' | translate }}">{{ 'ALTA' | translate }}</ion-select-option>
+          <ion-select-option value="{{ 'MEDIA' | translate }}">{{ 'MEDIA' | translate }}</ion-select-option>
+          <ion-select-option value="{{ 'BASSA' | translate }}">{{ 'BASSA' | translate }}</ion-select-option>
         </ion-select>
       </ion-item>
-<!-- 
-      <ion-item>
-        <ion-label> {{ 'MEMBRI' | translate }} </ion-label>
-        <ion-select multiple="true" formControlName="listaMembri">
-          <ion-select-option *ngFor="let member of members" [value]="member">{{ member }}</ion-select-option>
-        </ion-select>
-      </ion-item> -->
 
     <ion-button id= "button"  [disabled]="!newTaskForm.valid" color="primary" expand="block" type="submit">
       <ion-label> {{ 'CREA' | translate }} </ion-label>
