@@ -4,7 +4,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { ProgettiPage } from './progetti.page';
 import {DettaglioProgettoComponent} from './components/dettaglio-progetto/dettaglio-progetto.component';
 import { AggiungiMembriComponent } from './components/aggiungi-membri/aggiungi-membri.component';
-import { ListaTasksComponent } from './components/lista-tasks/lista-tasks.component';
 
 const routes: Routes = [
   // /progetti
@@ -32,7 +31,7 @@ const routes: Routes = [
           }
         ]
       },
-      
+
     ]
   },
 

@@ -9,7 +9,6 @@ import { ProgettiPageRoutingModule } from './progetti-routing.module';
 import { ProgettiPage } from './progetti.page';
 import {TranslateModule} from '@ngx-translate/core';
 import {DettaglioProgettoComponent} from './components/dettaglio-progetto/dettaglio-progetto.component';
-import {ListaTasksComponent} from './components/lista-tasks/lista-tasks.component';
 import { AggiungiMembriComponent } from './components/aggiungi-membri/aggiungi-membri.component';
 import { UserInitialsAvatarComponent } from 'src/app/shared/components/user-initials-avatar/user-initials-avatar.component';
 import { CompletedProjectsPipe } from './pipes/completed-projects.pipe';
@@ -23,13 +22,12 @@ import { CompletedProjectsPipe } from './pipes/completed-projects.pipe';
     ProgettiPageRoutingModule
   ],
   declarations: [
-    ProgettiPage, 
+    ProgettiPage,
     DettaglioProgettoComponent,
-    ListaTasksComponent, 
-    AggiungiMembriComponent, 
+    AggiungiMembriComponent,
     UserInitialsAvatarComponent,
     CompletedProjectsPipe
     ],
- 
+
 })
 export class ProgettiPageModule {}
