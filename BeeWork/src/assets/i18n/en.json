@@ -7,6 +7,7 @@
   "CANCEL_BUTTON": "Cancel",
   "DELETE_BUTTON": "Delete",
   "UPDATE_BUTTON": "Update",
+  "ADD_BUTTON": "Add",
 
   "LOGIN_TITLE": "Login",
   "LOGIN_ERROR_TITLE": "Incorrect credentials!",
@@ -60,5 +61,6 @@
   "SELEZIONA_PRIORITA": "Select a priority",
   "ALTA": "High",
   "MEDIA": "Medium",
-  "BASSA": "Low"
+  "BASSA": "Low",
+  "AGGIUNGI_MEMBRO": "Add a member"
 }

@@ -7,6 +7,7 @@
   "CANCEL_BUTTON": "Annulla",
   "DELETE_BUTTON": "Elimina",
   "UPDATE_BUTTON": "Modifica",
+  "ADD_BUTTON": "Aggiungi",
 
   "LOGIN_TITLE": "Login",
   "LOGIN_ERROR_TITLE": "Credenziali errate!",
@@ -60,5 +61,6 @@
   "SELEZIONA_PRIORITA": "Seleziona una priorità",
   "ALTA": "Alta",
   "MEDIA": "Media",
-  "BASSA": "Bassa"
+  "BASSA": "Bassa",
+  "AGGIUNGI_MEMBRO": "Aggiungi un membro"
 }

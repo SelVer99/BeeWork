@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-buttons slot="start">     
+    <ion-buttons slot="start">
       <ion-back-button icon="chevron-back-outline">
       </ion-back-button>
     </ion-buttons>
@@ -12,7 +12,7 @@
         <ion-icon name="home-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-title> Aggiungi membro</ion-title>
+    <ion-title> {{'AGGIUNGI_MEMBRO' | translate}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -26,7 +26,7 @@
     </ion-label>
 
     <ion-button (click)="addUserToProject(utente.id)">
-      Aggiungi
+      {{'ADD_BUTTON' | translate}}
         <!-- <ion-icon name="add-circle-outline"></ion-icon> -->
     </ion-button>
 

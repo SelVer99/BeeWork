@@ -1,7 +1,5 @@
-
-
 .profile {
-  color: black;
+  color: var(--ion-text-color);
   //padding: 15px;
   width: 3em;
   height: 3em;
@@ -13,7 +11,11 @@
   font-size: 16px;
   //margin: 4px 2px;
   border-radius: 50%;
-  border: 2px solid #fecb5e;
+  border: 2px solid var(--ion-color-primary);
+}
+
+h1 {
+  color: var(--ion-text-color);
 }
 
 .mail {

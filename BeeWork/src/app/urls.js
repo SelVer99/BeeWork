@@ -1,10 +1,10 @@
 
-// /home
-//   /home/:id
-//     /home/:id/tasks
-//       /home/:id/tasks/:id/
-//         /home/:id/tasks/:id/membri
-//     /home/:id/membri
+// /progetti
+//   /progetti/:id
+//     /progetti/:id/tasks
+//       /progetti/:id/tasks/:id/
+//         /progetti/:id/tasks/:id/membri
+//     /progetti/:id/membri
 // /login
 // /registrazione
 // /utenti
