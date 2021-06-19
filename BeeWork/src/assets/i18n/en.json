@@ -62,5 +62,6 @@
   "ALTA": "High",
   "MEDIA": "Medium",
   "BASSA": "Low",
-  "AGGIUNGI_MEMBRO": "Add a member"
+  "AGGIUNGI_MEMBRO": "Add a member",
+  "TASK_COMPLETATI": "Completed Tasks"
 }
